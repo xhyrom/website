@@ -4,8 +4,27 @@ import { Image, Picture } from "@astrojs/image/components";
 ---
 
 <Layout title="Welcome to Astro.">
+    <header>
+        <nav
+            class="text-white font-light text-2xl flex items-center justify-center"
+        >
+            <ul class="flex w-96 justify-evenly py-3">
+                <li>
+                    <a href="/" class="hover:text-[#fbc119] hover:underline"
+                        >Projects</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="/about"
+                        class="hover:text-[#fbc119] hover:underline">Docs</a
+                    >
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main
-        class="h-screen flex justify-center items-center pointer-events-none cursor-none"
+        class="mt-64 flex justify-center items-center flex-col pointer-events-none cursor-none"
     >
         <Image
             src={import("../public/logo.png")}
@@ -13,6 +32,6 @@ import { Image, Picture } from "@astrojs/image/components";
             height={200}
             alt="descriptive text"
         />
-        <h1>xHyroM</h1>
+        <h1 class="text-white font-extrabold text-6xl">xHyroM</h1>
     </main>
 </Layout>
