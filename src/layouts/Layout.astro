@@ -1,21 +1,38 @@
 ---
-export interface Props {
-    title: string;
-}
-
-const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk-SK">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
+        <!-- Primary Meta Tags -->
+        <title>xHyroM</title>
+        <meta name="title" content="xHyroM" />
+        <meta name="description" content="Ultimate placeholder text." />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hyrousek.tk/" />
+        <meta property="og:title" content="xHyroM" />
+        <meta property="og:description" content="Ultimate placeholder text." />
+        <meta
+            property="og:image"
+            content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+        />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://hyrousek.tk/" />
+        <meta property="twitter:title" content="xHyroM" />
+        <meta
+            property="twitter:description"
+            content="Ultimate placeholder text."
+        />
+        <meta
+            property="twitter:image"
+            content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+        />
     </head>
-    <body>
+    <body class="bg-dark overflow-x-hidden font-['Poppins']">
         <slot />
     </body>
 </html>
