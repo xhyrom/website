@@ -1,0 +1,29 @@
+---
+const navItems = [
+    {
+        name: "Docs",
+        link: "/docs",
+    },
+];
+---
+
+<header>
+    <nav
+        class="text-white font-light text-2xl flex items-center justify-center"
+    >
+        <ul class="flex w-96 justify-evenly py-3">
+            {
+                navItems.map((item) => (
+                    <li>
+                        <a
+                            href={item.link}
+                            class="hover:text-[#fbc119] hover:underline"
+                        >
+                            {item.name}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,37 @@
+---
+const socials = [
+    {
+        name: "GitHub",
+        link: "https://www.google.com/",
+        icon: "github",
+    },
+    {
+        name: "GitHub",
+        link: "https://www.google.com/",
+        icon: "github",
+    },
+    {
+        name: "GitHub",
+        link: "https://www.google.com/",
+        icon: "github",
+    },
+];
+---
+
+<section>
+    <h1 class="text-white font-extrabold text-6xl">xHyroM</h1>
+    <ul class="flex text-white my-6">
+        {
+            socials.map((social) => (
+                <li class="mr-2 flex">
+                    <a href={social.link} title={social.name}>
+                        <img
+                            src={`../public/icons/${social.icon}.svg`}
+                            alt={`${social.name} icon`}
+                        />
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</section>
