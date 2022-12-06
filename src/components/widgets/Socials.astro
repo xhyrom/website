@@ -1,4 +1,5 @@
 ---
+import { Image } from "@astrojs/image/components";
 const socials = [
     {
         name: "GitHub",
@@ -6,27 +7,37 @@ const socials = [
         icon: "github",
     },
     {
-        name: "GitHub",
+        name: "Discord",
         link: "https://www.google.com/",
-        icon: "github",
+        icon: "discord",
     },
     {
-        name: "GitHub",
+        name: "Twitter",
         link: "https://www.google.com/",
-        icon: "github",
+        icon: "twitter",
+    },
+    {
+        name: "YouTube",
+        link: "https://www.google.com/",
+        icon: "youtube",
     },
 ];
 ---
 
 <section>
     <h1 class="text-white font-extrabold text-6xl">xHyroM</h1>
-    <ul class="flex text-white my-6">
+    <ul class="flex text-white my-5">
         {
             socials.map((social) => (
-                <li class="mr-2 flex">
-                    <a href={social.link} title={social.name}>
+                <li class="mr-4 flex">
+                    <a
+                        class="hover:-translate-y-1 transition-all w-10 h-10"
+                        href={social.link}
+                        title={social.name}
+                    >
                         <img
-                            src={`../public/icons/${social.icon}.svg`}
+                            class="w-8 h-8"
+                            src={`/icons/${social.icon}.svg`}
                             alt={`${social.name} icon`}
                         />
                     </a>

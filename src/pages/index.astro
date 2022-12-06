@@ -1,20 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/widgets/Hero.astro";
 
-import Socials from "../components/widgets/Socials.astro";
 import Navbar from "../components/widgets/Navbar.astro";
-import { Image, Picture } from "@astrojs/image/components";
 ---
 
 <Layout title="Welcome to Astro.">
     <Navbar />
-    <main class="mt-64 flex justify-center items-center">
-        <Image
-            src={import("../public/logo.png")}
-            width={200}
-            height={200}
-            alt="descriptive text"
-        />
-        <Socials />
-    </main>
+    <Hero />
 </Layout>

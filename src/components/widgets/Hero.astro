@@ -1,0 +1,10 @@
+---
+import Socials from "../widgets/Socials.astro";
+import { Image } from "@astrojs/image/components";
+import logo from "../../assets/logo.png";
+---
+
+<main class="mt-64 flex justify-center items-center">
+    <Image src={logo} width={200} height={200} alt="descriptive text" />
+    <Socials />
+</main>
