@@ -24,25 +24,22 @@ const socials = [
 ];
 ---
 
-<section>
-    <h1 class="text-white font-extrabold text-6xl">xHyroM</h1>
-    <ul class="flex text-white my-5">
-        {
-            socials.map((social) => (
-                <li class="mr-4 flex">
-                    <a
-                        class="hover:-translate-y-1 transition-all w-10 h-10"
-                        href={social.link}
-                        title={social.name}
-                    >
-                        <img
-                            class="w-8 h-8"
-                            src={`/icons/${social.icon}.svg`}
-                            alt={`${social.name} icon`}
-                        />
-                    </a>
-                </li>
-            ))
-        }
-    </ul>
-</section>
+<ul class="flex text-white my-5 md:justify-start justify-center">
+    {
+        socials.map((social) => (
+            <li class="mr-4 ">
+                <a
+                    class="hover:-translate-y-1 transition-all w-10 h-10"
+                    href={social.link}
+                    title={social.name}
+                >
+                    <img
+                        class="w-8 h-8"
+                        src={`/icons/${social.icon}.svg`}
+                        alt={`${social.name} icon`}
+                    />
+                </a>
+            </li>
+        ))
+    }
+</ul>
