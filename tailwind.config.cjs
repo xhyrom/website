@@ -6,6 +6,10 @@ module.exports = {
             colors: {
                 dark: "#0D0D0D",
             },
+            dropShadow: {
+                yellow: ["0 35px 35px rgba(250, 193, 25, 0.5)"],
+                yellowalt: ["0 4px 12px rgba(250, 193, 25, 0.8)"],
+            },
         },
     },
     plugins: [],

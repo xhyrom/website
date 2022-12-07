@@ -2,14 +2,17 @@
 import Socials from "../widgets/Socials.astro";
 import { Image } from "@astrojs/image/components";
 import logo from "../../assets/logo.png";
+import Name from "../widgets/Name.astro";
 ---
 
 <main
     class="mt-24 md:mt-64 flex flex-col md:flex-row justify-center items-center"
 >
-    <Image src={logo} width={200} height={200} alt="descriptive text" />
+    <div class="flex justify-cener items-center">
+        <Image src={logo} width={200} height={200} alt="descriptive text" />
+    </div>
     <section class="md:ml-6 md:text-left text-center">
-        <h1 class="text-white font-extrabold text-6xl">xHyroM</h1>
+        <Name />
         <Socials />
     </section>
 </main>

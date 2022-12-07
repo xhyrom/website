@@ -1,5 +1,4 @@
 ---
-import { Image } from "@astrojs/image/components";
 const socials = [
     {
         name: "GitHub",
@@ -17,9 +16,9 @@ const socials = [
         icon: "twitter",
     },
     {
-        name: "YouTube",
+        name: "Instagram",
         link: "https://www.google.com/",
-        icon: "youtube",
+        icon: "instagram",
     },
 ];
 ---
@@ -28,13 +27,9 @@ const socials = [
     {
         socials.map((social) => (
             <li class="mr-4 ">
-                <a
-                    class="hover:-translate-y-1 transition-all w-10 h-10"
-                    href={social.link}
-                    title={social.name}
-                >
+                <a class="  w-10 h-10" href={social.link} title={social.name}>
                     <img
-                        class="w-8 h-8"
+                        class="w-8 h-8 hover:-translate-y-1 transition-all"
                         src={`/icons/${social.icon}.svg`}
                         alt={`${social.name} icon`}
                     />
