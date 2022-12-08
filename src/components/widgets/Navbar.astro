@@ -1,5 +1,11 @@
 ---
+import Container from "../atoms/Container.astro";
+
 const navItems = [
+    {
+        name: "Home",
+        link: "/",
+    },
     {
         name: "Projects",
         link: "/projects",
@@ -11,23 +17,24 @@ const navItems = [
 ];
 ---
 
-<header>
-    <nav
-        class="text-white font-light text-2xl flex items-center justify-center"
-    >
-        <ul class="flex w-96 justify-evenly py-3">
-            {
-                navItems.map((item) => (
-                    <li>
-                        <a
-                            href={item.link}
-                            class="hover:text-[#fbc119] hover:underline hover:drop-shadow-yellowalt"
-                        >
-                            {item.name}
-                        </a>
-                    </li>
-                ))
-            }
-        </ul>
-    </nav>
+<header class="text-white text-xl h-16 border-b-[1px] border-neutral-800">
+    <Container class="flex justify-between items-center h-full">
+        <a class="font-extrabold text-2xl" href="/">xHyroM</a>
+        <nav>
+            <ul class="flex gap-10">
+                {
+                    navItems.map((item) => (
+                        <li class=" hover:-translate-y-[2px] transition-all">
+                            <a
+                                href={item.link}
+                                class="hover:text-[#fbc119] text-neutral-300"
+                            >
+                                {item.name}
+                            </a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </nav>
+    </Container>
 </header>
