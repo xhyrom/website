@@ -1,7 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/widgets/Hero.astro";
-
 import Navbar from "../components/widgets/Navbar.astro";
 import Container from "../components/atoms/Container.astro";
 ---
@@ -12,18 +10,25 @@ import Container from "../components/atoms/Container.astro";
         Projects
     </h1>
 
-    <main class="flex gap-14 justify-center flex-wrap">
-        <section
-            class="w-96 border-[1px] border-neutral-800 bg-gray p-6 rounded-md"
-        >
-            <h2 class="text-3xl font-bold text-white mb-4">Projects</h2>
-            <p class="text-neutral-300">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                tincidunt, nisl eget aliquam tincidunt, nisl elit aliquam
-                tortor, eget aliquam nisl elit non nisl. Sed tincidunt, nisl
-                eget aliquam tincidunt, nisl elit aliquam tortor, eget aliquam
-                nisl elit non nisl.
-            </p>
-        </section>
-    </main>
+    <Container>
+        <main class="flex gap-14 flex-wrap">
+            <section
+                class="w-96 border-[1px] border-neutral-800 bg-gray p-6 rounded-md"
+            >
+                <h2 class="text-3xl font-bold text-white mb-4">Projects</h2>
+                <p class="text-neutral-300 mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    tincidunt, nisl eget aliquam tincidunt, nisl elit aliquam
+                    tortor, eget aliquam nisl elit non nisl. Sed tincidunt, nisl
+                    eget aliquam tincidunt, nisl elit aliquam tortor, eget
+                    aliquam nisl elit non nisl.
+                </p>
+                <a
+                    href=""
+                    class="py-2 px-6 text-neutral-300 bg-neutral-800 rounded-md hover:bg-neutral-700 transition-colors duration-100"
+                    >Visit</a
+                >
+            </section>
+        </main>
+    </Container>
 </Layout>
