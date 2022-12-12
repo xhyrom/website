@@ -18,10 +18,12 @@ const navItems = [
 ---
 
 <header class="text-white text-xl h-16 border-b-[1px] border-neutral-800">
-    <Container class="flex justify-between items-center h-full">
+    <Container
+        class="flex justify-around md:justify-between items-center h-full"
+    >
         <a class="font-extrabold text-2xl" href="/">xHyroM</a>
         <nav>
-            <ul class="flex gap-10">
+            <ul class="gap-10 hidden md:flex">
                 {
                     navItems.map((item) => (
                         <li class=" hover:-translate-y-[2px] transition-all">
@@ -36,5 +38,11 @@ const navItems = [
                 }
             </ul>
         </nav>
+        <button
+            ><span class="sr-only">menu</span><img
+                src="/icons/menu.svg"
+                alt="hambuerger menu icon"
+            />
+        </button>
     </Container>
 </header>
