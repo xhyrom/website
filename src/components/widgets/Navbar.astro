@@ -23,7 +23,9 @@ const navItems = [
     >
         <a class="font-extrabold text-2xl" href="/">xHyroM</a>
         <nav>
-            <ul class="gap-10 hidden md:flex">
+            <ul
+                class="absolute top-0 left-0 md:relative nav-links gap-10 md:flex hidden md:flex-row bg-gray md:bg-transparent w-full [&_li]:my-2 [&_li]:ml-4 border-b-[1px] md:border-b-0 border-neutral-800"
+            >
                 {
                     navItems.map((item) => (
                         <li class=" hover:-translate-y-[2px] transition-all">
@@ -38,11 +40,13 @@ const navItems = [
                 }
             </ul>
         </nav>
-        <button
-            ><span class="sr-only">menu</span><img
-                src="/icons/menu.svg"
-                alt="hambuerger menu icon"
-            />
+        <button class="hamburger md:hidden block">
+            <span class="sr-only">menu</span>
+            <img src="/icons/menu.svg" alt="hambuerger menu icon" />
+        </button>
+        <button class="hamburger-close md:hidden hidden z-30">
+            <span class="sr-only">menu</span>
+            <img src="/icons/x.svg" alt="hambuerger menu icon" />
         </button>
     </Container>
 </header>
