@@ -14,9 +14,20 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 import prefetch from "@astrojs/prefetch";
+import minify from "./astro-integrations/minify/index.mjs";
 
 // https://astro.build/config
 export default defineConfig({
     site: "https://stargazers.club", //prepisat uwu
-    integrations: [tailwind(), image(), sitemap(), compress(), prefetch()],
+    integrations: [
+        tailwind(),
+        image(),
+        sitemap(),
+        compress({
+            svg: false,
+            html: false,
+        }),
+        minify(),
+        prefetch()
+    ],
 });
