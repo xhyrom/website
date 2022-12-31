@@ -45,8 +45,20 @@
     </head>
     <body class="bg-dark overflow-x-hidden font-['Source Code Pro']">
         <slot />
+        <div class='fireworks-container h-full w-full absolute top-0 left-0 z-[-1000]' />
         <script>
             import "../scripts/menu.js";
+
+            import { Fireworks } from 'fireworks-js';
+
+            export const fireworksContainer = document.querySelector<HTMLDivElement>(
+                '.fireworks-container'
+            )!
+
+            const fireworks = new Fireworks(fireworksContainer, {
+                
+            })
+            fireworks.start()
         </script>
     </body>
 </html>
