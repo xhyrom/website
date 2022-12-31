@@ -56,7 +56,11 @@
             )!
 
             const fireworks = new Fireworks(fireworksContainer, {
-                
+                particles: 200,
+                rocketsPoint: {
+                    min: 0,
+                    max: 100,
+                }
             })
             fireworks.start()
         </script>
