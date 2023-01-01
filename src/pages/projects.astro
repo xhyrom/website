@@ -3,7 +3,17 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/widgets/Navbar.astro";
 import Container from "../components/atoms/Container.astro";
 
-const projects = [
+interface Project {
+    name: string;
+    link: string;
+    desc: string;
+    stats?: {
+        forks: number;
+        stars: number;
+    };
+}
+
+const projects: Project[] = [
     {
         name: "HyLib",
         link: "https://github.com/xHyroM/HyLib",
@@ -22,14 +32,52 @@ const projects = [
     {
         name: "Mashe",
         link: "https://github.com/xHyroM/mashe",
-        desc: "Simple, fast, and easy to use Event Handling for Java."
+        desc: "Simple, fast, and easy to use Event Handling for Java.",
     },
     {
         name: "Mumblum",
         link: "https://github.com/xHyroM/mumblum",
-        desc: "Mumblum is a simple, modern discord bot in JDA."
+        desc: "Mumblum is a simple, modern discord bot in JDA.",
+    },
+    {
+        name: "setup-bun",
+        link: "https://github.com/xHyroM/setup-bun",
+        desc: "Set up your GitHub Actions workflow with a specific version of Bun.",
+    },
+    {
+        name: "Roles Bot",
+        link: "https://github.com/xHyroM/roles-bot",
+        desc: "Discord bot for \"button\" roles, using Cloudflare Workers.",
+    },
+    {
+        name: "Bun Discord Bot",
+        link: "https://github.com/xHyroM/bun-discord-bot",
+        desc: "Official serverless discord bot for bun discord server."
+    },
+    {
+        name: "hykord",
+        link: "https://github.com/xHyroM/hykord",
+        desc: "My @discord client modification."
+    },
+    {
+        name: "frog",
+        link: "https://github.com/xHyroM/frog",
+        desc: "Frog is an extremely simple language based on the monkey language."
     }
 ];
+
+for (const project of projects) {
+    const repository = await (await fetch(`https://api.github.com/repos/${project.link.slice(19)}`, {
+        headers: {
+            'Authorization': `Bearer ${import.meta.env.GITHUB_ACCESS_TOKEN}`
+        }
+    })).json();
+
+    project.stats = {
+        forks: repository.forks,
+        stars: repository.stargazers_count
+    }
+}
 ---
 
 <Layout>
@@ -44,7 +92,7 @@ const projects = [
                 projects.map((project) => (
                     <section class="flex flex-col md:w-96 w-80 min-h-max border-[1px] border-neutral-800 bg-gray p-6 rounded-md">
                         <div class="flex">
-                            <h2 class="text-3xl font-bold text-white mb-4 break-all">
+                            <h2 class="text-3xl font-bold text-white mb-4 break-words">
                                 {project.name}
                             </h2>
                             <div class="bg-neutral-800 text-neutral-300 flex justify-center items-center h-fit rounded-lg py-1 px-4 ml-4 gap-2 translate-y-1">
@@ -54,7 +102,7 @@ const projects = [
                                         alt=""
                                         class="w-[21px] h-[21px] translate-y-[1px]"
                                     />
-                                    <p>4</p>
+                                    <p>{project.stats!.stars}</p>
                                 </div>
                                 <div class="flex gap-1">
                                     {" "}
@@ -63,7 +111,7 @@ const projects = [
                                         alt=""
                                         class="w-[21px] h-[21px] translate-y-[1px]"
                                     />
-                                    <p>9</p>
+                                    <p>{project.stats!.forks}</p>
                                 </div>
                             </div>
                         </div>
