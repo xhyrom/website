@@ -1,0 +1,29 @@
+---
+import Container from "../components/atoms/Container.astro";
+import Navbar from "../components/widgets/Navbar.astro";
+import Layout from "./Layout.astro"
+
+export interface Props {
+	content: {
+		title: string;
+		date?: string;
+	};
+}
+
+const {
+	content: { title, date },
+} = Astro.props;
+---
+
+<Layout>
+    <Navbar />
+    <h1 class="text-white text-5xl w-full text-center py-32 font-extrabold">
+        {title}
+    </h1>
+
+    <Container>
+        <div class="text-white text-2xl">
+            <slot />
+        </div>
+    </Container>
+</Layout>
