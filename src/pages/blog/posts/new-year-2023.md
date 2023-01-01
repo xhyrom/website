@@ -1,5 +1,5 @@
 ---
-title: Šťastný nový rok 2022
+title: Šťastný nový rok 2023
 date: 'Januar 01 2023'
 layout: ../../../layouts/BlogLayout.astro
 ---
