@@ -16,7 +16,7 @@ import compress from "astro-compress";
 import prefetch from "@astrojs/prefetch";
 
 import robotsTxt from "astro-robots-txt";
-import minify from "./astro-integrations/minify/index.mjs";
+import minify from "./astro-integrations/minify";
 
 // https://astro.build/config
 export default defineConfig({
