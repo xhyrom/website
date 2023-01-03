@@ -1,6 +1,6 @@
 ---
 title: Šťastný nový rok 2023
-date: 'Januar 01 2023'
+date: January 01 2023
 layout: ../../../layouts/blog/PostLayout.astro
 ---
 

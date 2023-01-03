@@ -1,0 +1,34 @@
+---
+import Container from "../../components/atoms/Container.astro";
+import Sidebar from "../../components/widgets/docs/Sidebar.astro";
+import Navbar from "../../components/widgets/Navbar.astro";
+import Layout from "../../layouts/Layout.astro"
+
+export interface Props {
+	content: {
+		title: string;
+	};
+}
+
+const {
+	content: { title },
+} = Astro.props;
+---
+
+<Layout>
+    <Navbar />
+
+    <Container class="flex flex-row">
+        <Sidebar />
+
+        <div class="w-full p-8">
+            <h1 class="text-white text-5xl py-10 font-extrabold">
+                {title}
+            </h1>
+            
+            <main class="text-white text-2xl prose">
+                <slot />
+            </main>
+        </div>
+    </Container>
+</Layout>
