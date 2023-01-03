@@ -2,16 +2,16 @@
 import Container from "../../components/atoms/Container.astro";
 import Sidebar from "../../components/widgets/docs/Sidebar.astro";
 import Navbar from "../../components/widgets/Navbar.astro";
-import Layout from "../../layouts/Layout.astro"
+import Layout from "../../layouts/Layout.astro";
 
 export interface Props {
-	content: {
-		title: string;
-	};
+    content: {
+        title: string;
+    };
 }
 
 const {
-	content: { title },
+    content: { title },
 } = Astro.props;
 ---
 
@@ -25,7 +25,7 @@ const {
             <h1 class="text-white text-5xl py-10 font-extrabold">
                 {title}
             </h1>
-            
+
             <main class="text-white text-2xl prose">
                 <slot />
             </main>

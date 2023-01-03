@@ -1,13 +1,13 @@
 ---
 import type { MarkdownInstance } from "astro";
 
-const files = await Astro.glob('../../../pages/docs/items/**/*.md');
+const files = await Astro.glob("../../../pages/docs/items/**/*.md");
 for (let i = 0; i < 100; i++) {
     files.push(files[0]);
 }
 
 const sections = files.reduce((acc, file) => {
-    const category: string = file.url!.split('/')[3];
+    const category: string = file.url!.split("/")[3];
 
     if (!acc[category]) acc[category] = [];
 
@@ -20,24 +20,28 @@ const categories = Object.keys(sections);
 ---
 
 <aside aria-label="Sidebar">
-    <nav class="w-full mr-4 py-4 bg-gray-50 dark:bg-gray-800">
+    <nav class="w-full mr-16 py-4">
         <ul class="overflow-y-auto overflow-x-visible">
-            {categories.map((category) => 
-                <li>
-                    <div class="pt-5">
-                        <h1 class="text-white text-2xl w-full font-extrabold">{category}</h1>
-                        <ul>
-                            {sections[category].map((section) => 
-                                <li class="text-white w-full my-2 pl-4 hover:bg-white/20 p-2">
-                                    <a href={section.url}>
-                                        {section.frontmatter.title}
-                                    </a>
-                                </li>
-                            )}
-                        </ul>
-                    </div>
-                </li>
-            )}
+            {
+                categories.map((category) => (
+                    <li>
+                        <div class="pt-5">
+                            <h1 class="text-white text-2xl w-full font-extrabold ">
+                                {category}
+                            </h1>
+                            <ul>
+                                {sections[category].map((section) => (
+                                    <li class="text-white my-2 hover:bg-white/20 rounded-sm p-2 transition-colors duration-150">
+                                        <a href={section.url} class="px-4">
+                                            {section.frontmatter.title}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </li>
+                ))
+            }
         </ul>
     </nav>
-</aside> 
+</aside>
