@@ -1,6 +1,9 @@
 ---
 import type { MarkdownInstance } from "astro";
 
+import leftArrow from "/icons/chevrons-left.svg";
+import rightArrow from "/icons/chevrons-right.svg";
+
 const files = await Astro.glob("../../../pages/docs/items/**/*.md");
 for (let i = 0; i < 100; i++) {
     files.push(files[0]);
@@ -19,8 +22,16 @@ const sections = files.reduce((acc, file) => {
 const categories = Object.keys(sections);
 ---
 
-<aside aria-label="Sidebar">
-    <nav class="mr-16 w-full py-4">
+<aside aria-label="Sidebar" class="">
+    <div class="absolute z-10 text-white md:hidden">
+        <button id="sidebar-show" class="p-4 pl-2">
+            <img src={rightArrow} alt="" id="open-arrow" class="duration-200" />
+        </button>
+    </div>
+    <nav
+        id="sidebar"
+        class="md:bg-transparentpy-4 invisible absolute mt-6 mr-16 w-full -translate-x-full bg-dark transition-transform duration-200 md:visible md:relative md:mt-0 md:inline md:translate-x-0"
+    >
         <ul class="overflow-y-auto overflow-x-visible">
             {
                 categories.map((category) => (
