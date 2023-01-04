@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Primary Meta Tags -->
         <title>xHyroM</title>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <meta name="title" content="xHyroM" />
         <meta name="description" content="Ultimate placeholder text." />
 
@@ -37,31 +37,32 @@
         />
 
         <!-- CSP -->
-        <meta http-equiv="Content-Security-Policy" content="img-src 'self'; font-src *; style-src 'self' 'unsafe-inline' fonts.googleapis.com; script-src 'self' 'unsafe-inline'; object-src 'none'" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="img-src 'self'; font-src *; style-src 'self' 'unsafe-inline' fonts.googleapis.com; script-src 'self' 'unsafe-inline'; object-src 'none'"
+        />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossorigin
-        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;500;700;900&display=swap"
             rel="stylesheet"
         />
     </head>
-    <body class="bg-dark overflow-x-hidden font-['Source Code Pro']">
+    <body class="font-['Source Code Pro'] overflow-x-hidden bg-dark">
         <slot />
-        <div class='fireworks-container h-full w-full absolute top-0 left-0 z-[-1000]' />
+        <div
+            class="fireworks-container absolute top-0 left-0 z-[-1000] h-full w-full"
+        >
+        </div>
         <script>
             import "../scripts/menu.js";
             import "../scripts/snow.js";
 
-            import { Fireworks } from 'fireworks-js';
+            import { Fireworks } from "fireworks-js";
 
-            export const fireworksContainer = document.querySelector<HTMLDivElement>(
-                '.fireworks-container'
-            )!
+            export const fireworksContainer =
+                document.querySelector<HTMLDivElement>(".fireworks-container")!;
 
             const fireworks = new Fireworks(fireworksContainer, {
                 rocketsPoint: {
@@ -69,8 +70,8 @@
                     max: 100,
                 },
                 autoresize: true,
-            })
-            fireworks.start()
+            });
+            fireworks.start();
         </script>
     </body>
 </html>
@@ -79,11 +80,11 @@
     ::-webkit-scrollbar {
         width: 16px;
     }
-    
+
     ::-webkit-scrollbar-thumb {
         border: 6px solid rgba(0, 0, 0, 0);
         background-clip: padding-box;
         border-radius: 9999px;
-        background-color: #AAAAAA;
+        background-color: #aaaaaa;
     }
 </style>

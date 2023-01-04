@@ -6,12 +6,12 @@ import Name from "./Name.astro";
 ---
 
 <main
-    class="mt-24 md:mt-64 flex flex-col md:flex-row justify-center items-center"
+    class="mt-24 flex flex-col items-center justify-center md:mt-64 md:flex-row"
 >
-    <div class="flex justify-cener items-center">
+    <div class="justify-cener flex items-center">
         <Image src={logo} width={200} height={200} alt="descriptive text" />
     </div>
-    <section class="md:ml-6 md:text-left text-center">
+    <section class="text-center md:ml-6 md:text-left">
         <Name />
         <Socials />
     </section>

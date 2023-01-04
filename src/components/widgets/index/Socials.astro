@@ -23,13 +23,13 @@ const socials = [
 ];
 ---
 
-<ul class="flex text-white my-5 md:justify-start justify-center">
+<ul class="my-5 flex justify-center text-white md:justify-start">
     {
         socials.map((social) => (
             <li class="mr-4 ">
                 <a class="h-10 w-10" href={social.link} title={social.name}>
                     <img
-                        class="h-8 w-8 hover:-translate-y-1 transition-all"
+                        class="h-8 w-8 transition-all hover:-translate-y-1"
                         src={`/icons/${social.icon}.svg`}
                         alt={`${social.name} icon`}
                     />
