@@ -1,0 +1,15 @@
+<script>
+    import { Fireworks } from "fireworks-js";
+
+    export const fireworksContainer =
+        document.querySelector<HTMLDivElement>(".fireworks-container")!;
+
+    const fireworks = new Fireworks(fireworksContainer, {
+        rocketsPoint: {
+            min: 0,
+            max: 100,
+        },
+        autoresize: true,
+    });
+    fireworks.start();
+</script>

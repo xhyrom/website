@@ -1,4 +1,15 @@
 ---
+import Snow from "../components/widgets/Snow.astro";
+import Fireworks from "../components/widgets/Fireworks.astro";
+
+const date = new Date();
+
+const fireworks =
+    (date.getMonth() === 11 && date.getDate() === 31) ||
+    (date.getMonth() === 0 && date.getDate() <= 3);
+const snow =
+    (date.getMonth() === 11 && date.getDate() === 10) ||
+    (date.getMonth() === 0 && date.getDate() <= 3);
 ---
 
 <!DOCTYPE html>
@@ -57,22 +68,6 @@
         </div>
         <script>
             import "../scripts/menu.js";
-            import "../scripts/sidebarToggle.js";
-            /* import "../scripts/snow.js"; */
-
-            import { Fireworks } from "fireworks-js";
-
-            export const fireworksContainer =
-                document.querySelector<HTMLDivElement>(".fireworks-container")!;
-
-            const fireworks = new Fireworks(fireworksContainer, {
-                rocketsPoint: {
-                    min: 0,
-                    max: 100,
-                },
-                autoresize: true,
-            });
-            fireworks.start();
         </script>
     </body>
 </html>
