@@ -1,6 +1,6 @@
 ## <a name="commit"></a> Commit Message Format
 
-_This specification is inspired by and supersedes the [Brainclements commit message format][https://gist.github.com/brianclements/841ea7bffdb01346392c]._
+_This specification is inspired by and supersedes the [Brainclements commit message format](https://gist.github.com/brianclements/841ea7bffdb01346392c)._
 
 We have very precise rules over how our Git commit messages must be formatted.
 This format leads to **easier to read commit history**.
