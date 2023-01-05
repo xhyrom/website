@@ -21,7 +21,13 @@ const categories = Object.keys(sections);
 <aside aria-label="Sidebar">
     <div class="absolute z-10 text-white md:hidden">
         <button id="sidebar-show" class="p-4 pl-2">
-            <img src={rightArrow} alt="" id="open-arrow" class="duration-200" />
+            <span class="sr-only">sidebar menu</span>
+            <img
+                src={rightArrow}
+                alt="sidebar hamburger menu icon"
+                id="open-arrow"
+                class="duration-200"
+            />
         </button>
     </div>
     <nav
