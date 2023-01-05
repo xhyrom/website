@@ -1,6 +1,6 @@
 ---
 import Socials from "./Socials.astro";
-import { Image } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 import logo from "../../../assets/logo.png";
 import Name from "./Name.astro";
 ---
@@ -9,7 +9,13 @@ import Name from "./Name.astro";
     class="mt-24 flex flex-col items-center justify-center md:mt-64 md:flex-row"
 >
     <div class="justify-cener flex items-center">
-        <Image src={logo} width={200} height={200} alt="descriptive text" />
+        <Picture
+            src={logo}
+            formats={["png"]}
+            sizes="(max-width: 200px) 100vw, 200px"
+            widths={[200, 400]}
+            alt="descriptive text"
+        />
     </div>
     <section class="text-center md:ml-6 md:text-left">
         <Name />
