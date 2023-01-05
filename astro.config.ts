@@ -14,13 +14,13 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 import prefetch from "@astrojs/prefetch";
-
 import robotsTxt from "astro-robots-txt";
 import minify from "./astro-integrations/minify";
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://hyrousek.tk", //prepisat uwu
+    site: "https://hyrousek.tk",
+    //prepisat uwu
     integrations: [
         tailwind(),
         image(),
@@ -34,7 +34,7 @@ export default defineConfig({
             policy: [
                 {
                     userAgent: "*",
-                }
+                },
             ],
             sitemap: true,
         }),
