@@ -25,9 +25,11 @@ The `footer` is optional. The [Commit Message Footer](#commit-footer) format des
 #### <a name="commit-header"></a>Commit Message Header
 
 ```
-<type>(<scope>): <short summary>
-  │       │             │
-  │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
+<type>(<scope>)(!?): <short summary>
+  │       │      │      │
+  │       │      │      └─⫸ Summary in present tense. Not capitalized. No period at the end.
+  │       │      │
+  │       │      └─⫸ Exclamation mark: breaking change
   │       │
   │       └─⫸ Commit Scope: layouts|components|components-widgets|components-atoms|pages
   │                          pages-blog|pages-docs|scripts|assets
@@ -35,7 +37,8 @@ The `footer` is optional. The [Commit Message Footer](#commit-footer) format des
   └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|test
 ```
 
-The `<type>` and `<summary>` fields are mandatory, the `(<scope>)` field is optional.
+The `<type>` and `<summary>` fields are mandatory, the `(<scope>)` field is optional.  
+Exclamation mark is optional too, but it's used to mark breaking changes.
 
 ##### Type
 
@@ -87,32 +90,22 @@ You can include a comparison of the previous behavior with the new behavior in o
 
 #### <a name="commit-footer"></a>Commit Message Footer
 
-The footer can contain information about breaking changes and deprecations and is also the place to reference GitHub issues, Jira tickets, and other PRs that this commit closes or is related to.
-For example:
+The footer is optional and is used for two purposes:
+
+-   To reference issues that this commit closes
+-   To include information that doesn't fit in the header or body, such as a link to a file or a suggestion to review a pull request
+
+The format for the footer is as follows:
 
 ```
-BREAKING CHANGE: <breaking change summary>
-<BLANK LINE>
-<breaking change description + migration instructions>
-<BLANK LINE>
-<BLANK LINE>
-Fixes #<issue number>
+Closes/Fixes #<issue number>
 ```
 
 or
 
 ```
-DEPRECATED: <what is deprecated>
-<BLANK LINE>
-<deprecation description + recommended update path>
-<BLANK LINE>
-<BLANK LINE>
-Closes #<pr number>
+See pull request #<pull request number>
 ```
-
-Breaking Change section should start with the phrase "BREAKING CHANGE: " followed by a summary of the breaking change, a blank line, and a detailed description of the breaking change that also includes migration instructions.
-
-Similarly, a Deprecation section should start with "DEPRECATED: " followed by a short description of what is deprecated, a blank line, and a detailed description of the deprecation that also mentions the recommended update path.
 
 ### Revert commits
 
