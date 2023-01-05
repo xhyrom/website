@@ -31,7 +31,6 @@ The `footer` is optional. The [Commit Message Footer](#commit-footer) format des
   │       │
   │       └─⫸ Commit Scope: layouts|components|components-widgets|components-atoms|pages
   │                          pages-blog|pages-docs|scripts|assets
-  │                          platform-browser-dynamic|platform-server|router|service-worker|
   │
   └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|test
 ```
