@@ -14,8 +14,8 @@
 
 ## Setup
 
-1. Clone this repository: `git clone https://github.com/[your_username]/astro-project.git`
-2. Navigate to the project directory: `cd astro-project`
+1. Clone this repository: `git clone https://github.com/xHyroM/website.git`
+2. Navigate to the project directory: `cd website`
 3. Install the dependencies: `npm install`
 
 ## Usage
