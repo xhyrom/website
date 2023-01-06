@@ -6,6 +6,7 @@ module.exports = {
             colors: {
                 dark: "#0D0D0D",
                 gray: "#131313",
+                hyroGold: "#fbc119",
             },
             dropShadow: {
                 yellow: ["0 35px 35px rgba(250, 193, 25, 0.5)"],
