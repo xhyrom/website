@@ -52,16 +52,8 @@ const snow =
             http-equiv="Content-Security-Policy"
             content="img-src 'self'; font-src *; style-src 'self' 'unsafe-inline' fonts.googleapis.com; script-src 'self' 'unsafe-inline'; object-src 'none'"
         />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;500;700;900&display=swap"
-            rel="stylesheet"
-            media="print"
-        />
     </head>
-    <body class="font-['Source Code Pro'] overflow-x-hidden bg-dark">
+    <body class="overflow-x-hidden bg-dark font-sans">
         <slot />
         <div
             class="fireworks-container absolute top-0 left-0 z-[-1000] h-full w-full"
