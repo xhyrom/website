@@ -19,7 +19,7 @@ import minify from "./astro-integrations/minify";
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://hyrousek.tk",
+    site: "https://xhyrom.me",
     //prepisat uwu
     integrations: [
         tailwind(),
