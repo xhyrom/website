@@ -1,0 +1,35 @@
+---
+const url = Astro.url.pathname;
+const { title } = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Primary Meta Tags -->
+<title>xHyroM</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="canonical" href={`https://xhyrom.me${url}`}/>
+<meta name="title" content="xHyroM" />
+<meta name="description" content={title} />
+<meta name="keywords" content="xhyrom developer dev hyro hyrousek"/>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={`https://xhyrom.me${url}`} />
+<meta property="og:title" content="xHyroM" />
+<meta property="og:description" content={title} />
+<meta property="og:image" content="/banner.png" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={`https://xhyrom.me${url}`} />
+<meta property="twitter:title" content="xHyroM" />
+<meta property="twitter:description" content={title} />
+<meta property="twitter:image" content="/banner.png" />
+
+<!-- CSP -->
+<meta
+    http-equiv="Content-Security-Policy"
+    content="img-src 'self'; font-src *; style-src 'self' 'unsafe-inline' fonts.googleapis.com; script-src 'self' 'unsafe-inline'; object-src 'none'"
+/>

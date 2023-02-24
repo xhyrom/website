@@ -1,6 +1,7 @@
 ---
 import Snow from "../components/widgets/Snow.astro";
 import Fireworks from "../components/widgets/Fireworks.astro";
+import DefaultHead from "../components/widgets/Head.astro";
 
 const date = new Date();
 
@@ -10,41 +11,15 @@ const fireworks =
 const snow =
     (date.getMonth() === 11 && date.getDate() === 10) ||
     (date.getMonth() === 0 && date.getDate() <= 3);
+
+const { head } = Astro.props;
+const Head = head || DefaultHead;
 ---
 
 <!DOCTYPE html>
 <html lang="sk-SK">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- Primary Meta Tags -->
-        <title>xHyroM</title>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://xhyrom.me"/>
-        <meta name="title" content="xHyroM" />
-        <meta name="description" content="I'm Hyro :) o/" />
-        <meta name="keywords" content="xhyrom developer dev hyro hyrousek"/>
-
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://hyrousek.tk/" />
-        <meta property="og:title" content="xHyroM" />
-        <meta property="og:description" content="I'm Hyro :) o/" />
-        <meta property="og:image" content="/banner.png" />
-
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://hyrousek.tk/" />
-        <meta property="twitter:title" content="xHyroM" />
-        <meta property="twitter:description" content="I'm Hyro :) o/" />
-        <meta property="twitter:image" content="/banner.png" />
-
-        <!-- CSP -->
-        <meta
-            http-equiv="Content-Security-Policy"
-            content="img-src 'self'; font-src *; style-src 'self' 'unsafe-inline' fonts.googleapis.com; script-src 'self' 'unsafe-inline'; object-src 'none'"
-        />
+        <Head {...Astro.props} />
     </head>
     <body class="overflow-x-hidden bg-dark font-sans">
         <slot />
