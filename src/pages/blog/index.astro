@@ -4,7 +4,7 @@ import Navbar from "../../components/widgets/Navbar.astro";
 import Container from "../../components/atoms/Container.astro";
 
 const posts = (await Astro.glob('./posts/*.md')).sort(
-	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+	(a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
 );
 ---
 
