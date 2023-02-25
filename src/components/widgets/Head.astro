@@ -1,13 +1,17 @@
+---
+const { schemaOrg } = Astro.props;
+---
+
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- Primary Meta Tags -->
 <title>xHyroM</title>
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="canonical" href="https://xhyrom.me"/>
+<link rel="canonical" href="https://xhyrom.me" />
 <meta name="title" content="xHyroM" />
 <meta name="description" content="I'm Hyro :) o/" />
-<meta name="keywords" content="xhyrom developer dev hyro hyrousek"/>
+<meta name="keywords" content="xhyrom developer dev hyro hyrousek" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
@@ -25,6 +29,12 @@
 
 <!-- CSP -->
 <meta
-    http-equiv="Content-Security-Policy"
-    content="img-src 'self'; font-src *; style-src 'self' 'unsafe-inline' fonts.googleapis.com; script-src 'self' 'unsafe-inline'; object-src 'none'"
+  http-equiv="Content-Security-Policy"
+  content="img-src 'self'; font-src *; style-src 'self' 'unsafe-inline' fonts.googleapis.com; script-src 'self' 'unsafe-inline'; object-src 'none'"
 />
+
+{
+  schemaOrg && (
+    <script type="application/ld+json" set:html={JSON.stringify(schemaOrg)} />
+  )
+}

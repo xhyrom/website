@@ -27,7 +27,7 @@
     "devDependencies": {
         "@types/html-minifier": "^4.0.2",
         "prettier": "2.8.1",
-        "prettier-plugin-astro": "^0.7.1",
+        "prettier-plugin-astro": "^0.7.2",
         "prettier-plugin-tailwindcss": "^0.2.1"
     }
 }

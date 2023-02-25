@@ -2,30 +2,31 @@
 import PostHead from "../../components/widgets/blog/PostHead.astro";
 import Container from "../../components/atoms/Container.astro";
 import Navbar from "../../components/widgets/Navbar.astro";
-import Layout from "../Layout.astro"
+import Layout from "../Layout.astro";
 
 export interface Props {
-	content: {
-		title: string;
-	};
+  content: {
+    title: string;
+    date: string;
+  };
 }
 
 const {
-	content: { title },
+  content: { title, date },
 } = Astro.props;
 ---
 
-<Layout head={PostHead} title={title}>
-    <Navbar />
-    <h1 class="text-white text-5xl w-full text-center py-32 font-extrabold">
-        {title}
-    </h1>
+<Layout head={PostHead} title={title} date={date}>
+  <Navbar />
+  <h1 class="text-white text-5xl w-full text-center py-32 font-extrabold">
+    {title}
+  </h1>
 
-    <Container>
-        <main class="text-white text-2xl prose">
-            <article>
-                <slot />
-            </article>
-        </main>
-    </Container>
+  <Container>
+    <main class="text-white text-2xl prose">
+      <article>
+        <slot />
+      </article>
+    </main>
+  </Container>
 </Layout>

@@ -6,11 +6,11 @@ import DefaultHead from "../components/widgets/Head.astro";
 const date = new Date();
 
 const fireworks =
-    (date.getMonth() === 11 && date.getDate() === 31) ||
-    (date.getMonth() === 0 && date.getDate() <= 3);
+  (date.getMonth() === 11 && date.getDate() === 31) ||
+  (date.getMonth() === 0 && date.getDate() <= 3);
 const snow =
-    (date.getMonth() === 11 && date.getDate() === 10) ||
-    (date.getMonth() === 0 && date.getDate() <= 3);
+  (date.getMonth() === 11 && date.getDate() === 10) ||
+  (date.getMonth() === 0 && date.getDate() <= 3);
 
 const { head } = Astro.props;
 const Head = head || DefaultHead;
@@ -18,30 +18,28 @@ const Head = head || DefaultHead;
 
 <!DOCTYPE html>
 <html lang="sk-SK">
-    <head>
-        <Head {...Astro.props} />
-    </head>
-    <body class="overflow-x-hidden bg-dark font-sans">
-        <slot />
-        <div
-            class="fireworks-container absolute top-0 left-0 z-[-1000] h-full w-full"
-        >
-        </div>
-        <script>
-            import "../scripts/menu.js";
-        </script>
-    </body>
-</html>
-
-<style is:global>
+  <head>
+    <Head {...Astro.props} />
+  </head>
+  <body class="overflow-x-hidden bg-dark font-sans">
+    <slot />
+    <div
+      class="fireworks-container absolute top-0 left-0 z-[-1000] h-full w-full"
+    >
+    </div>
+    <script>
+      import "../scripts/menu.js";
+    </script>
+  </body><style is:global>
     ::-webkit-scrollbar {
-        width: 16px;
+      width: 16px;
     }
 
     ::-webkit-scrollbar-thumb {
-        border: 6px solid rgba(0, 0, 0, 0);
-        background-clip: padding-box;
-        border-radius: 9999px;
-        background-color: #aaaaaa;
+      border: 6px solid rgba(0, 0, 0, 0);
+      background-clip: padding-box;
+      border-radius: 9999px;
+      background-color: #aaaaaa;
     }
-</style>
+  </style>
+</html>

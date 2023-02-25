@@ -4,7 +4,21 @@ import Hero from "../components/widgets/index/Hero.astro";
 import Navbar from "../components/widgets/Navbar.astro";
 ---
 
-<Layout>
-    <Navbar />
-    <Hero />
+<Layout
+  schemaOrg={{
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    name: "xHyroM",
+    url: "https://xhyrom.me",
+    image: "https://xhyrom.me/favicon.ico",
+    sameAs: [
+      "https://twitter.com/hyrousek",
+      "https://instagram.com/hyro.dev",
+      "https://github.com/xHyroM",
+    ],
+    jobTitle: "Developer",
+  }}
+>
+  <Navbar />
+  <Hero />
 </Layout>
