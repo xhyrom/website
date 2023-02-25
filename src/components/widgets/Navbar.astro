@@ -2,63 +2,58 @@
 import Container from "../atoms/Container.astro";
 
 const navItems = [
-    {
-        name: "Home",
-        link: "/",
-    },
-    {
-        name: "Projects",
-        link: "/projects",
-    },
-    {
-        name: "Blog",
-        link: "/blog",
-    },
-    {
-        name: "Docs",
-        link: "/docs",
-    },
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Projects",
+    link: "/projects",
+  },
+  {
+    name: "Blog",
+    link: "/blog",
+  },
+  {
+    name: "Docs",
+    link: "/docs",
+  },
 ];
 ---
 
 <header class="h-16 border-b-[1px] border-neutral-800 text-xl text-white">
-    <Container
-        class="flex justify-around md:justify-between items-center h-full"
-    >
-        <a class="text-2xl font-extrabold" href="/">xHyroM</a>
-        <nav>
-            <ul
-                class="nav-links absolute top-0 left-0 z-20 hidden w-full gap-10 border-b-[1px] border-neutral-800 bg-gray transition-all md:relative md:flex md:flex-row md:border-b-0 md:bg-transparent [&_li]:my-2 [&_li]:ml-4"
-            >
-                {
-                    navItems.map((item) => (
-                        <li class=" transition-all hover:-translate-y-[2px]">
-                            <a
-                                href={item.link}
-                                class="hover:text-hyroGold text-neutral-300"
-                            >
-                                {item.name}
-                            </a>
-                        </li>
-                    ))
-                }
-            </ul>
-        </nav>
-        <button class="hamburger block md:hidden">
-            <span class="sr-only">menu</span>
-            <img
-                src="/icons/menu.svg"
-                alt="hamburger menu icon"
-                class="h-[23px] w-[24px]"
-            />
-        </button>
-        <button class="hamburger-close z-30 hidden md:hidden">
-            <span class="sr-only">menu</span>
-            <img
-                src="/icons/x.svg"
-                alt="hamburger menu icon"
-                class="h-[23px] w-[24px]"
-            />
-        </button>
-    </Container>
+  <Container class="flex justify-around md:justify-between items-center h-full">
+    <a class="text-2xl font-extrabold" href="/">xHyroM</a>
+    <nav>
+      <ul
+        class="nav-links absolute top-0 left-0 z-20 hidden w-full gap-10 border-b-[1px] border-neutral-800 bg-gray transition-all md:relative md:flex md:flex-row md:border-b-0 md:bg-transparent [&_li]:my-2 [&_li]:ml-4"
+      >
+        {
+          navItems.map((item) => (
+            <li class=" transition-all hover:-translate-y-[2px]">
+              <a href={item.link} class="hover:text-hyroGold text-neutral-300">
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <button class="hamburger block md:hidden">
+      <span class="sr-only">menu</span>
+      <img
+        src="/icons/menu.svg"
+        alt="hamburger menu icon"
+        class="h-[23px] w-[24px]"
+      />
+    </button>
+    <button class="hamburger-close z-30 hidden md:hidden">
+      <span class="sr-only">menu</span>
+      <img
+        src="/icons/x.svg"
+        alt="hamburger menu icon"
+        class="h-[23px] w-[24px]"
+      />
+    </button>
+  </Container>
 </header>

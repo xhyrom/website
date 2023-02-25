@@ -6,20 +6,20 @@ import Name from "./Name.astro";
 ---
 
 <main
-    class="mt-24 flex flex-col items-center justify-center md:mt-64 md:flex-row"
+  class="mt-24 flex flex-col items-center justify-center md:mt-64 md:flex-row"
 >
-    <div class="justify-cener flex items-center">
-        <Picture
-            src={logo}
-            formats={["png"]}
-            sizes="(max-width: 200px) 100vw, 200px"
-            widths={[200, 400]}
-            alt="descriptive text"
-            class={"h-[200px] w-[200px]"}
-        />
-    </div>
-    <section class="text-center md:ml-6 md:text-left">
-        <Name />
-        <Socials />
-    </section>
+  <div class="justify-cener flex items-center">
+    <Picture
+      src={logo}
+      formats={["png"]}
+      sizes="(max-width: 200px) 100vw, 200px"
+      widths={[200, 400]}
+      alt="descriptive text"
+      class={"h-[200px] w-[200px]"}
+    />
+  </div>
+  <section class="text-center md:ml-6 md:text-left">
+    <Name />
+    <Socials />
+  </section>
 </main>

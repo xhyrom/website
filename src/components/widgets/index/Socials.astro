@@ -1,40 +1,40 @@
 ---
 const socials = [
-    {
-        name: "GitHub",
-        link: "https://github.com/xHyroM/",
-        icon: "github",
-    },
-    {
-        name: "Discord",
-        link: "https://discord.gg/kFPKmEKeMS/",
-        icon: "discord",
-    },
-    {
-        name: "Twitter",
-        link: "https://twitter.com/hyrousek/",
-        icon: "twitter",
-    },
-    {
-        name: "Instagram",
-        link: "https://www.instagram.com/hyro.dev/",
-        icon: "instagram",
-    },
+  {
+    name: "GitHub",
+    link: "https://github.com/xHyroM/",
+    icon: "github",
+  },
+  {
+    name: "Discord",
+    link: "https://discord.gg/kFPKmEKeMS/",
+    icon: "discord",
+  },
+  {
+    name: "Twitter",
+    link: "https://twitter.com/hyrousek/",
+    icon: "twitter",
+  },
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com/hyro.dev/",
+    icon: "instagram",
+  },
 ];
 ---
 
 <ul class="my-5 flex justify-center text-white md:justify-start">
-    {
-        socials.map((social) => (
-            <li class="mr-4 ">
-                <a class="h-10 w-10" href={social.link} title={social.name}>
-                    <img
-                        class="h-8 w-8 transition-all hover:-translate-y-1"
-                        src={`/icons/${social.icon}.svg`}
-                        alt={`${social.name} icon`}
-                    />
-                </a>
-            </li>
-        ))
-    }
+  {
+    socials.map((social) => (
+      <li class="mr-4 ">
+        <a class="h-10 w-10" href={social.link} title={social.name}>
+          <img
+            class="h-8 w-8 transition-all hover:-translate-y-1"
+            src={`/icons/${social.icon}.svg`}
+            alt={`${social.name} icon`}
+          />
+        </a>
+      </li>
+    ))
+  }
 </ul>
