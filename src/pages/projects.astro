@@ -10,7 +10,6 @@ interface Project {
   stats?: {
     forks: number;
     stars: number;
-    updated_at: Date;
   };
 }
 
@@ -99,13 +98,10 @@ for (const project of projects) {
   project.stats = {
     forks: repository.forks,
     stars: repository.stargazers_count,
-    updated_at: new Date(repository.updated_at),
   };
 }
 
-projects.sort(
-  (a, b) => b.stats!.updated_at.getTime() - a.stats!.updated_at.getTime()
-);
+projects.sort((a, b) => a.name.localeCompare(b.name));
 ---
 
 <Layout
