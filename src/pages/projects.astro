@@ -41,7 +41,7 @@ const projects: Project[] = [
   },
   {
     name: "setup-bun",
-    link: "https://github.com/xHyroM/setup-bun",
+    link: "https://github.com/oven-sh/setup-bun",
     desc: "Set up your GitHub Actions workflow with a specific version of Bun.",
   },
   {
@@ -93,15 +93,24 @@ const projects: Project[] = [
 
 for (const project of projects) {
   try {
-    const repository = await (
-      await fetch(`https://api.github.com/repos/${project.link.slice(19)}`, {
+    const rawRepository = await fetch(
+      `https://api.github.com/repos/${project.link.slice(19)}`,
+      {
         headers: {
           Authorization: `Bearer ${import.meta.env.GITHUB_ACCESS_TOKEN}`,
         },
-      })
-    ).json();
+      }
+    ).catch(console.log);
+    if (!rawRepository) {
+      project.stats = {
+        forks: 0,
+        stars: 0,
+      };
 
-    console.log(repository); //debug
+      continue;
+    }
+
+    const repository = await rawRepository.json();
 
     project.stats = {
       forks: repository.forks,
