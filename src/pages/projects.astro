@@ -92,21 +92,24 @@ const projects: Project[] = [
 ];
 
 for (const project of projects) {
-  const repository = await (
-    await fetch(`https://api.github.com/repos/${project.link.slice(19)}`, {
-      headers: {
-        Authorization: `Bearer ${import.meta.env.GITHUB_ACCESS_TOKEN}`,
-      },
-    })
-  ).json();
+  try {
+    const repository = await (
+      await fetch(`https://api.github.com/repos/${project.link.slice(19)}`, {
+        headers: {
+          Authorization: `Bearer ${import.meta.env.GITHUB_ACCESS_TOKEN}`,
+        },
+      })
+    ).json();
 
-  console.log(import.meta.env);
-  console.log(repository); //debug
+    console.log(repository); //debug
 
-  project.stats = {
-    forks: repository.forks,
-    stars: repository.stargazers_count,
-  };
+    project.stats = {
+      forks: repository.forks,
+      stars: repository.stargazers_count,
+    };
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 projects.sort((a, b) => a.name.localeCompare(b.name));
