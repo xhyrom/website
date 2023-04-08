@@ -100,6 +100,8 @@ for (const project of projects) {
     })
   ).json();
 
+  console.log(repository); //debug
+
   project.stats = {
     forks: repository.forks,
     stars: repository.stargazers_count,
