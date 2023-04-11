@@ -9,21 +9,21 @@ const { title, date } = Astro.props;
 <!-- Primary Meta Tags -->
 <title>xHyroM</title>
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="canonical" href={`https://xhyrom.me${url}`} />
+<link rel="canonical" href={`https://xhyrom.dev${url}`} />
 <meta name="title" content="xHyroM" />
 <meta name="description" content={title} />
 <meta name="keywords" content="xhyrom developer dev hyro hyrousek" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content={`https://xhyrom.me${url}`} />
+<meta property="og:url" content={`https://xhyrom.dev${url}`} />
 <meta property="og:title" content="xHyroM" />
 <meta property="og:description" content={title} />
 <meta property="og:image" content="/banner.png" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={`https://xhyrom.me${url}`} />
+<meta property="twitter:url" content={`https://xhyrom.dev${url}`} />
 <meta property="twitter:title" content="xHyroM" />
 <meta property="twitter:description" content={title} />
 <meta property="twitter:image" content="/banner.png" />
@@ -41,20 +41,20 @@ const { title, date } = Astro.props;
     "@type": "BlogPosting",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://xhyrom.me${url}`,
+      "@id": `https://xhyrom.dev${url}`,
     },
     headline: title,
     description: title,
-    image: "https://xhyrom.me/banner.png",
+    image: "https://xhyrom.dev/banner.png",
     author: {
       "@type": "Person",
       name: "xHyroM",
-      url: "https://xhyrom.me",
+      url: "https://xhyrom.dev",
     },
     publisher: {
       "@type": "Person",
       name: "xHyroM",
-      url: "https://xhyrom.me"
+      url: "https://xhyrom.dev"
     },
     datePublished: new Date(date).toISOString().split("T")[0],
     dateModified: new Date(date).toISOString().split("T")[0],
