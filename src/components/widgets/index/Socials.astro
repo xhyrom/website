@@ -3,22 +3,27 @@ const socials = [
   {
     name: "GitHub",
     link: "https://github.com/xHyroM/",
-    icon: "github",
+    icon: "github.svg",
   },
   {
-    name: "Discord",
+    name: "Discord.svg",
     link: "https://discord.gg/kFPKmEKeMS/",
-    icon: "discord",
+    icon: "discord.svg",
   },
   {
     name: "Twitter",
     link: "https://twitter.com/hyrousek/",
-    icon: "twitter",
+    icon: "twitter.svg",
   },
   {
     name: "Instagram",
     link: "https://www.instagram.com/hyro.dev/",
-    icon: "instagram",
+    icon: "instagram.svg",
+  },
+  {
+    name: "ko-fi",
+    link: "https://ko-fi.com/xhyrom",
+    icon: "ko-fi.png",
   },
 ];
 ---
@@ -30,7 +35,7 @@ const socials = [
         <a class="h-10 w-10" href={social.link} title={social.name}>
           <img
             class="h-8 w-8 transition-all hover:-translate-y-1"
-            src={`/icons/${social.icon}.svg`}
+            src={`/icons/${social.icon}`}
             alt={`${social.name} icon`}
           />
         </a>
