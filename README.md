@@ -7,7 +7,7 @@
 <h4 align="center">Source code for hyro's website, simple and modern page.</h4>
 
 <p align="center">
-    <a href="https://discord.gg/kFPKmEKeMS/" alt="Discord">
+    <a href="https://discord.com/invite/kFPKmEKeMS/" alt="Discord">
         <img src="https://img.shields.io/discord/1046534628577640528?label=discord&style=for-the-badge&color=2fbfc4"/>
     </a>
 </p>
