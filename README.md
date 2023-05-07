@@ -36,4 +36,4 @@ To contribute to this project, please follow the [standard Git workflow](https:/
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [Apache-2.0 License](LICENSE).
