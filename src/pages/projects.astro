@@ -142,16 +142,16 @@ projects.sort((a, b) => a.name.localeCompare(b.name));
     Projects
   </h1>
 
-  <Container>
+  <Container class="pb-4">
     <main class="flex flex-wrap justify-center gap-12">
       {
         projects.map((project) => (
-          <section class="bg-gray flex min-h-max w-80 flex-col justify-between rounded-md border-[1px] border-neutral-800 p-6 md:w-96">
+          <section class="flex min-h-max w-80 flex-col justify-between rounded-md border-[1px] border-neutral-800 bg-gray p-6 md:w-96">
             <div class="flex">
               <h2 class="mb-4 break-words text-3xl font-bold text-white">
                 {project.name}
               </h2>
-              <div class="ml-4 flex h-fit translate-y-1 items-center justify-center gap-2 rounded-lg bg-neutral-800 py-1 px-4 text-neutral-300">
+              <div class="ml-4 flex h-fit translate-y-1 items-center justify-center gap-2 rounded-lg bg-neutral-800 px-4 py-1 text-neutral-300">
                 <div class="flex gap-1">
                   <img
                     src="/icons/star.svg"
@@ -176,7 +176,7 @@ projects.sort((a, b) => a.name.localeCompare(b.name));
             <div>
               <a
                 href={project.link}
-                class="bottom-0  inline-flex w-fit rounded-md bg-neutral-800 py-2 px-6 text-neutral-300 transition-colors duration-100 hover:bg-neutral-700 [&_img]:transition-all [&_img]:hover:translate-x-[2px]"
+                class="bottom-0  inline-flex w-fit rounded-md bg-neutral-800 px-6 py-2 text-neutral-300 transition-colors duration-100 hover:bg-neutral-700 [&_img]:transition-all [&_img]:hover:translate-x-[2px]"
               >
                 GitHub{" "}
                 <img
@@ -187,7 +187,7 @@ projects.sort((a, b) => a.name.localeCompare(b.name));
               </a>
               <a
                 href={project.link}
-                class=" bottom-0 inline-flex  w-fit translate-y-[6px] py-2 px-6 text-neutral-300 transition-all duration-100 hover:-translate-y-[-4px] hover:text-neutral-200"
+                class=" bottom-0 inline-flex  w-fit translate-y-[6px] px-6 py-2 text-neutral-300 transition-all duration-100 hover:-translate-y-[-4px] hover:text-neutral-200"
               >
                 <img src="/icons/book-open.svg" class="mr-2 h-6 w-5" alt="" />
                 Docs{" "}
