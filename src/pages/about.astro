@@ -1,25 +1,86 @@
 ---
 import Container from "../components/atoms/Container.astro";
 import Navbar from "../components/widgets/Navbar.astro";
+import TechIcon from "../components/widgets/TechIcon.astro";
 import Layout from "../layouts/Layout.astro";
 
 const skills = [
-  [
-    "TypeScript, JavaScript",
-    "Bun, Node.js, little Deno",
-    "React, Astro, Next.js",
-  ],
-  ["HTML", "TailwindCSS", "CSS"],
-  ["Java", "Kotlin", "Rust (learning now)"],
-  ["SQLite", "MySQL", "MongoDB", "Redis"],
-  [
-    "Git",
-    "GitHub Actions",
-    "GitHub Pages",
-    "Cloudflare Workers",
-    "Cloudflare Pages",
-    "Netlify",
-  ],
+  {
+    name: "TypeScript",
+    icon: "logos:typescript-icon",
+  },
+  {
+    name: "JavaScript",
+    icon: "logos:javascript",
+  },
+  {
+    name: "Bun",
+    icon: "logos:bun",
+  },
+  {
+    name: "NodeJS",
+    icon: "logos:nodejs-icon-alt",
+  },
+  {
+    name: "Deno",
+    icon: "logos:deno",
+  },
+  {
+    name: "React",
+    icon: "logos:react",
+  },
+  {
+    name: "NextJS",
+    icon: "file-icons:nextjs",
+  },
+  {
+    name: "Astro",
+    icon: "vscode-icons:file-type-astro",
+  },
+  {
+    name: "TailwindCSS",
+    icon: "logos:tailwindcss-icon",
+  },
+  {
+    name: "Java",
+    icon: "logos:java",
+  },
+  {
+    name: "Kotlin",
+    icon: "logos:kotlin-icon",
+  },
+  {
+    name: "Rust",
+    icon: "vscode-icons:file-type-rust",
+  },
+  {
+    name: "Go",
+    icon: "vscode-icons:file-type-go-aqua",
+  },
+  {
+    name: "MySQL",
+    icon: "logos:mysql-icon",
+  },
+  {
+    name: "MongoDB",
+    icon: "devicon:mongodb",
+  },
+  {
+    name: "Redis",
+    icon: "devicon:redis",
+  },
+  {
+    name: "Git",
+    icon: "mdi:git",
+  },
+  {
+    name: "GitHub",
+    icon: "mdi:github",
+  },
+  {
+    name: "CloudFlare",
+    icon: "logos:cloudflare",
+  },
 ];
 ---
 
@@ -89,15 +150,12 @@ const skills = [
           My skill set spans various programming languages, databases, and
           frameworks.
 
-          <ul class="list-inside list-disc">
+          <ul
+            class="mx-auto mb-4 flex w-fit flex-wrap items-center justify-center rounded-md border border-neutral-800"
+          >
             {
               skills.map((skill) => (
-                <>
-                  {skill.map((item) => (
-                    <li>{item}</li>
-                  ))}
-                  <hr class="my-4" />
-                </>
+                <TechIcon icon={skill.icon} name={skill.name} />
               ))
             }
           </ul>

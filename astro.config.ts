@@ -19,25 +19,25 @@ import minify from "./astro-integrations/minify";
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://xhyrom.dev/",
-    //prepisat uwu
-    integrations: [
-        tailwind(),
-        image(),
-        sitemap(),
-        compress({
-            svg: false,
-            html: false,
-        }),
-        prefetch(),
-        robotsTxt({
-            policy: [
-                {
-                    userAgent: "*",
-                },
-            ],
-            sitemap: true,
-        }),
-        minify(),
-    ],
+  site: "https://xhyrom.dev/",
+  //prepisat uwu
+  integrations: [
+    tailwind(),
+    image(),
+    sitemap(),
+    compress({
+      svg: false,
+      html: false,
+    }),
+    prefetch(),
+    robotsTxt({
+      policy: [
+        {
+          userAgent: "*",
+        },
+      ],
+      sitemap: true,
+    }),
+    minify(),
+  ],
 });

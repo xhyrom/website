@@ -1,0 +1,18 @@
+---
+import { Tooltips } from "astro-tooltips";
+import { Icon } from "astro-icon";
+
+type Props = {
+  name: string;
+  icon: string;
+};
+
+const { name, icon } = Astro.props as Props;
+---
+
+<li class="p-2">
+  <Tooltips interactive={false} delay={[15, 150]} placement="top" />
+  <span title={name}>
+    <Icon name={icon} class="h-10 w-10" />
+  </span>
+</li>
