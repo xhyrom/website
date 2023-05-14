@@ -78,8 +78,21 @@ const skills = [
     icon: "mdi:github",
   },
   {
-    name: "CloudFlare",
+    name: "GitHub Actions",
+    icon: "devicon:githubactions",
+  },
+  {
+    name: "Cloudflare",
     icon: "logos:cloudflare",
+  },
+  {
+    name: "Cloudflare Pages",
+    icon: "simple-icons:cloudflarepages",
+    color: "#f48120",
+  },
+  {
+    name: "Cloudflare Workers",
+    icon: "logos:cloudflare-workers-icon",
   },
 ];
 ---
@@ -143,23 +156,33 @@ const skills = [
 
       <section>
         <h1 class="w-full py-10 text-center text-4xl font-extrabold text-white">
-          Skills
+          Technology
         </h1>
 
-        <p class="mb-4">
-          My skill set spans various programming languages, databases, and
-          frameworks.
+        <div class="mb-4">
+          <p class="mb-4">
+            Below you can see the technologies I work with and use frequently.
+          </p>
 
           <ul
             class="mx-auto mb-4 flex w-fit flex-wrap items-center justify-center rounded-md border border-neutral-800"
           >
             {
               skills.map((skill) => (
-                <TechIcon icon={skill.icon} name={skill.name} />
+                <TechIcon
+                  icon={skill.icon}
+                  color={skill.color}
+                  name={skill.name}
+                />
               ))
             }
           </ul>
 
+          I'm still learning with some things like Go and Rust, so I don't have
+          a perfect grasp of them, but I've included them in this list anyway.
+        </div>
+
+        <p class="mb-4">
           Continuous learning is an essential aspect of my professional journey,
           and while I do not claim to be a master of any programming language,
           my expertise in various languages is continually evolving. As a
