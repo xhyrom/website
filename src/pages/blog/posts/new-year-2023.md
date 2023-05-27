@@ -1,17 +1,17 @@
 ---
-title: Šťastný nový rok 2023
+title: Happy New Year 2023
 date: January 01 2023
 layout: ../../../layouts/blog/PostLayout.astro
 ---
 
-Ahoj!
+Hey! Hey! Hey!
 
-S novým rokom 2023 prichádza aj nová vlna nádejí a očakávaní. Tento rok je plný príležitostí a možností, a je na nás, ako ich využijeme.
+With the new year 2023 comes a new wave of hopes and expectations. This year is full of opportunities and possibilities, and it's up to us how we take advantage of them.
 
-Možno už máte v hlave nejaké ciele, ktoré by ste radi v tomto roku dosiahli. Možno sa chcete zlepšiť v práci, alebo sa venovať svojim koníčkom. Možno sa chcete viac venovať rodine a priateľom, alebo začať nový životný štýl. Čokoľvek to je, nechajte sa inšpirovať a nebojte sa zmeny.
+You may already have some goals in mind that you'd like to accomplish this year. Maybe you want to improve at work, or pursue your hobbies. Maybe you want to spend more time with family and friends, or start a new lifestyle. Whatever it is, be inspired and don't be afraid of change.
 
-Nový rok je tiež skvelou príležitosťou na to, aby sme sa zamysleli nad tým, čo je v živote naozaj dôležité. Nezabúdajme na to, že peniaze a veci nás nevidia šťastnými, ale skutočné hodnoty ako láska, priateľstvo a rodina sú tými, ktoré nás robia šťastnými.
+The New Year is also a great opportunity to reflect on what's really important in life. Let's not forget that money and things don't see us happy, but real values like love, friendship and family are what make us happy.
 
-Takže nech sa páči, vítajme nový rok 2023 s otvorenou náručou a nechajme sa unášať vlnou nových príležitostí a zmien. Nech je to rok plný lásky, úspechov, zdravia a šťastia pre všetkých.
+So, let's welcome the new year 2023 with open arms and let the wave of new opportunities and changes wash over us. May it be a year filled with love, success, health and happiness for all.
 
-<b>Šťastný nový rok!</b>
+**Happy New Year!**
