@@ -1,17 +1,17 @@
 ---
-title: "Ako som prišiel o notebook na 2 mesiace: Príbeh záruky a nepríjemných prekvapení"
+title: "How I lost my laptop for 2 months: a story of warranty and unpleasant surprises"
 date: February 24 2023
 layout: ../../../layouts/blog/PostLayout.astro
 ---
 
-Ahojte,
+Hey, guys,
 
-V dnešnej dobe sú notebooky a počítače nevyhnutnosťou, a keďže väčšina z nás ich používa denne, nemôže sa stať nič horšie, ako keď sa poškodí. Dnes by som sa s vami chcel podeliť o svoju skúsenosť s opravou notebooku, ktorý som nedávno poškodil.
+Laptops and computers are a necessity nowadays, and since most of us use them daily, nothing could happen worse than when they get damaged. Today, I would like to share with you my experience of repairing a laptop that I recently damaged.
 
-Príbeh sa začal jedného večera, keď som sa pripojil na Discord s kamarátmi iZboxom a Oliminátorom, aby sme si zahrali hru Valorant. Počas hry som držal klávesu A aby som išiel doľava, ale nakoniec mi vypadla. Snažil som sa ju vrátiť na svoje miesto, ale nedarilo sa mi to a nakoniec som to úplne urval. Našťastie, notebook mal ešte jeden deň záruky, takže sme sa rozhodli ho poslať na opravu ešte v záruke.
+The story started one evening when I joined Discord with my friends iZbox and Oliminator to play a game of Valorant. During the game, I held the A key to go left, but it eventually fell out. I tried to put it back in place, but I couldn't, and eventually it completely snapped off. Luckily, the laptop still had one more day of warranty, so we decided to send it in for repair while still under warranty.
 
-Po približne dvoch týždňoch nám podpora oznámila, že sa na to nevzťahuje záruka a musíme zaplatiť 110€ za opravu, čo sme považovali za neprimeranú sumu. Klávesnica stojí iba 40€, takže účtovanie 70€ za prácu sa nám zdalo neopodstatnené. Požiadali sme teda o vrátenie notebooku a následne sme boli prekvapení, keď sme sa dozvedeli, že sa nám ho nedá vrátiť do 30 dní. Nakoniec nám servis oznámil, že nám notebook opravia úplne zadarmo alebo nám vrátia peniaze. S ohľadom na infláciu sme sa rozhodli notebook opraviť a teraz už len čakáme, kedy sa nám vráti.
+After about two weeks, support told us that it was not covered under warranty and we had to pay €110 for the repair, which we thought was an unreasonable amount. The keyboard is only €40, so charging €70 for the work seemed unreasonable to us. So we asked for the laptop back and were subsequently surprised to learn that we could not return it within 30 days. Finally, the service advised us that they would repair the laptop completely free of charge or refund our money. In view of inflation, we decided to have the laptop repaired and now we are just waiting to see when it will be returned to us.
 
-Tento príbeh mi pomohol pochopiť dôležitosť záruky a to, že je vždy potrebné dbať na svoje zariadenia. Takisto som si uvedomil, že aj keď sa zdá situácia zlá, môže sa v konečnom dôsledku ukázať ako pozitívna. Som vďačný, že som mohol túto skúsenosť prežiť a z nej sa poučiť.
+This story helped me understand the importance of warranty and that you should always take care of your devices. It also made me realise that even if a situation seems bad, it can ultimately turn out to be positive. I am grateful that I was able to live through this experience and learn from it.
 
-Dúfam, že vám tento príbeh pomohol pochopiť dôležitosť starostlivosti o vaše notebooky a tiež vám ukázal, že sa situácia môže zlepšiť aj v prípade, že to na prvý pohľad nevyzerá tak. Vďaka za prečítanie!
+I hope this story has helped you understand the importance of taking care of your laptops and also shown you that things can get better even if they don't look that way at first. Thanks for reading!
