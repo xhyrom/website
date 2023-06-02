@@ -13,11 +13,11 @@
   "redirects": [
     {
       "source": "/docs",
-      "destination": "/docs/items/nadpis/introduction"
+      "destination": "/docs/discord-experiments-api/introduction"
     },
     {
       "source": "/docs/",
-      "destination": "/docs/items/nadpis/introduction"
+      "destination": "/docs/discord-experiments-api/introduction"
     }
   ]
 }
