@@ -1,38 +1,38 @@
 ---
-import Container from "../../components/atoms/Container.astro";
-import Sidebar from "../../components/widgets/docs/Sidebar.astro";
-import Navbar from "../../components/widgets/Navbar.astro";
-import Layout from "../../layouts/Layout.astro";
+import Container from "@components/atoms/Container.astro";
+import Sidebar from "@components/widgets/docs/Sidebar.astro";
+import Navbar from "@components/widgets/Navbar.astro";
+import Layout from "@layouts/Layout.astro";
 
 export interface Props {
-    content: {
-        title: string;
-    };
+  content: {
+    title: string;
+  };
 }
 
 const {
-    content: { title },
+  content: { title },
 } = Astro.props;
 ---
 
 <Layout>
-    <Navbar />
+  <Navbar />
 
-    <Container class="flex flex-row">
-        <Sidebar />
+  <Container class="flex flex-row">
+    <Sidebar />
 
-        <div class="w-full p-8">
-            <h1 class="py-10 text-5xl font-extrabold text-white">
-                {title}
-            </h1>
+    <div class="w-full p-8">
+      <h1 class="py-10 text-5xl font-extrabold text-white">
+        {title}
+      </h1>
 
-            <main class="prose text-2xl text-white">
-                <slot />
-            </main>
-        </div>
-    </Container>
+      <main class="prose text-2xl text-white">
+        <slot />
+      </main>
+    </div>
+  </Container>
 </Layout>
 
 <script>
-    import "../../scripts/sidebarToggle.js";
+  import "../../scripts/sidebarToggle.js";
 </script>

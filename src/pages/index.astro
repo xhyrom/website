@@ -1,7 +1,9 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Hero from "../components/widgets/index/Hero.astro";
-import Navbar from "../components/widgets/Navbar.astro";
+import Layout from "@layouts/Layout.astro";
+import Navbar from "@components/widgets/Navbar.astro";
+import { Picture } from "@astrojs/image/components";
+import logo from "@assets/logo.png";
+import { socials } from "../config";
 ---
 
 <Layout
@@ -20,5 +22,40 @@ import Navbar from "../components/widgets/Navbar.astro";
   }}
 >
   <Navbar />
-  <Hero />
+  <main
+    class="mt-24 flex flex-col items-center justify-center md:mt-64 md:flex-row"
+  >
+    <div class="justify-cener flex items-center">
+      <Picture
+        src={logo}
+        formats={["png"]}
+        sizes="(max-width: 200px) 100vw, 200px"
+        widths={[200, 400]}
+        aspectRatio={"1:1"}
+        alt="descriptive text"
+        class={"h-[200px] w-[200px]"}
+      />
+    </div>
+    <section class="text-center md:ml-6 md:text-left">
+      <div class="flex drop-shadow-yellow">
+        <h1 class="text-6xl font-extrabold text-white">xHyroM</h1>
+      </div>
+
+      <ul class="my-5 flex justify-center text-white md:justify-start">
+        {
+          socials.map((social) => (
+            <li class="mr-4 ">
+              <a class="h-10 w-10" href={social.link} title={social.name}>
+                <img
+                  class="h-8 w-8 transition-all hover:-translate-y-1"
+                  src={`/icons/${social.icon}`}
+                  alt={`${social.name} icon`}
+                />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
 </Layout>

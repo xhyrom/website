@@ -1,8 +1,7 @@
 ---
-import PostHead from "../../components/widgets/blog/PostHead.astro";
-import Container from "../../components/atoms/Container.astro";
-import Navbar from "../../components/widgets/Navbar.astro";
-import Layout from "../Layout.astro";
+import Container from "@components/atoms/Container.astro";
+import Navbar from "@components/widgets/Navbar.astro";
+import Layout from "@layouts/Layout.astro";
 
 export interface Props {
   content: {
@@ -14,16 +13,18 @@ export interface Props {
 const {
   content: { title, date },
 } = Astro.props;
+
+const url = Astro.url.pathname;
 ---
 
-<Layout head={PostHead} title={title} date={date}>
+<Layout description={title} date={date} url={`https://xhyrom.dev${url}`}>
   <Navbar />
   <h1 class="w-full py-32 text-center text-5xl font-extrabold text-white">
     {title}
   </h1>
 
   <Container>
-    <main class="prose text-2xl prose-invert">
+    <main class="prose prose-invert text-2xl">
       <article>
         <slot />
       </article>

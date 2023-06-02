@@ -1,31 +1,49 @@
 ---
-import Snow from "../components/widgets/Snow.astro";
-import Fireworks from "../components/widgets/Fireworks.astro";
-import DefaultHead from "../components/widgets/Head.astro";
+import SEOEmbed from "@components/widgets/SEOEmbed.astro";
 
-const date = new Date();
-
-const fireworks =
-  (date.getMonth() === 11 && date.getDate() === 31) ||
-  (date.getMonth() === 0 && date.getDate() <= 3);
-const snow =
-  (date.getMonth() === 11 && date.getDate() === 10) ||
-  (date.getMonth() === 0 && date.getDate() <= 3);
-
-const { head } = Astro.props;
-const Head = head || DefaultHead;
+const { title, description, keywords, schemaOrg } = {
+  title: "xHyroM",
+  description: "I'm Hyro :) o/",
+  keywords: "xhyrom developer dev hyro hyrousek",
+  ...Astro.props,
+};
 ---
 
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <Head {...Astro.props} />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+
+    <SEOEmbed {...Astro.props} />
+
+    <!-- CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="img-src 'self'; font-src *; style-src 'self' 'unsafe-inline' fonts.googleapis.com; script-src 'self' 'unsafe-inline'; object-src 'none'"
+    />
+
+    {
+      schemaOrg && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(schemaOrg)}
+        />
+      )
+    }
   </head>
   <body class="overflow-x-hidden bg-dark font-sans">
     <slot />
 
     <script>
-      import "../scripts/menu.js";
+      import "../scripts/menu.ts";
     </script>
     <style is:global>
       ::-webkit-scrollbar {

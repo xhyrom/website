@@ -17,6 +17,10 @@ import prefetch from "@astrojs/prefetch";
 import robotsTxt from "astro-robots-txt";
 import minify from "./astro-integrations/minify";
 
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://xhyrom.dev/",
@@ -40,4 +44,15 @@ export default defineConfig({
     }),
     minify(),
   ],
+  vite: {
+    resolve: {
+      alias: {
+        "~": resolve(__dirname, "./src"),
+        "@pages": resolve(__dirname, "./src/pages"),
+        "@assets": resolve(__dirname, "./src/assets"),
+        "@layouts": resolve(__dirname, "./src/layouts"),
+        "@components": resolve(__dirname, "./src/components"),
+      },
+    },
+  },
 });

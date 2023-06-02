@@ -3,58 +3,58 @@ import type { MarkdownInstance } from "astro";
 
 import rightArrow from "../../../../public/icons/chevrons-right.svg";
 
-const files = await Astro.glob("../../../pages/docs/items/**/*.md");
+const files = await Astro.glob("@pages/docs/items/**/*.md");
 
 const sections = files.reduce((acc, file) => {
-    const category: string = file.url!.split("/")[3];
+  const category: string = file.url!.split("/")[3];
 
-    if (!acc[category]) acc[category] = [];
+  if (!acc[category]) acc[category] = [];
 
-    acc[category].push(file);
+  acc[category].push(file);
 
-    return acc;
+  return acc;
 }, {} as Record<string, MarkdownInstance<Record<string, any>>[]>);
 
 const categories = Object.keys(sections);
 ---
 
 <aside aria-label="Sidebar">
-    <div class="absolute z-10 text-white md:hidden">
-        <button id="sidebar-show" class="p-4 pl-2">
-            <span class="sr-only">sidebar menu</span>
-            <img
-                src={rightArrow}
-                alt="sidebar hamburger menu icon"
-                id="open-arrow"
-                class="h-6 w-6 duration-200"
-            />
-        </button>
-    </div>
-    <nav
-        id="sidebar"
-        class="invisible absolute mt-6 mr-16 w-full -translate-x-full bg-dark py-4 transition-transform duration-200 md:visible md:relative md:mt-0 md:inline md:translate-x-0 md:bg-transparent"
-    >
-        <ul class="overflow-y-auto overflow-x-visible">
-            {
-                categories.map((category) => (
-                    <li>
-                        <div class="pt-5">
-                            <h1 class="w-full text-2xl font-extrabold text-white ">
-                                {category}
-                            </h1>
-                            <ul>
-                                {sections[category].map((section) => (
-                                    <li class="my-2 rounded-sm p-2 text-white transition-colors duration-150 hover:bg-white/20">
-                                        <a href={section.url} class="px-4">
-                                            {section.frontmatter.title}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </li>
-                ))
-            }
-        </ul>
-    </nav>
+  <div class="absolute z-10 text-white md:hidden">
+    <button id="sidebar-show" class="p-4 pl-2">
+      <span class="sr-only">sidebar menu</span>
+      <img
+        src={rightArrow}
+        alt="sidebar hamburger menu icon"
+        id="open-arrow"
+        class="h-6 w-6 duration-200"
+      />
+    </button>
+  </div>
+  <nav
+    id="sidebar"
+    class="invisible absolute mr-16 mt-6 w-full -translate-x-full bg-dark py-4 transition-transform duration-200 md:visible md:relative md:mt-0 md:inline md:translate-x-0 md:bg-transparent"
+  >
+    <ul class="overflow-y-auto overflow-x-visible">
+      {
+        categories.map((category) => (
+          <li>
+            <div class="pt-5">
+              <h1 class="w-full text-2xl font-extrabold text-white ">
+                {category}
+              </h1>
+              <ul>
+                {sections[category].map((section) => (
+                  <li class="my-2 rounded-sm p-2 text-white transition-colors duration-150 hover:bg-white/20">
+                    <a href={section.url} class="px-4">
+                      {section.frontmatter.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
 </aside>
