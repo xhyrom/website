@@ -1,36 +1,40 @@
 ---
-import Container from "@components/atoms/Container.astro";
-import Sidebar from "@components/widgets/docs/Sidebar.astro";
+import LeftSidebar from "@components/widgets/docs/LeftSidebar.astro";
+import RightSidebar from "@components/widgets/docs/RightSidebar.astro";
 import Navbar from "@components/widgets/Navbar.astro";
 import Layout from "@layouts/Layout.astro";
 
-export interface Props {
-  content: {
-    title: string;
-  };
-}
-
-const {
-  content: { title },
-} = Astro.props;
+const item = Astro.props;
+const currentPage = new URL(Astro.request.url).pathname;
 ---
 
-<Layout>
+<Layout title={`Docs - ${item.content.title}`} description={item.content.description} url={`https://xhyrom.dev${item.url}`}>
   <Navbar />
 
-  <Container class="flex flex-row">
-    <Sidebar />
-
-    <div class="w-full p-8">
-      <h1 class="py-10 text-5xl font-extrabold text-white">
-        {title}
-      </h1>
-
-      <main class="prose text-2xl text-white">
-        <slot />
-      </main>
+  <div class="grid grid-cols-12">
+    <div
+      class="col-span-3 flex flex-row md:sticky md:top-0 md:h-screen md:pt-12"
+    >
+      <div class="ml-auto">
+        <LeftSidebar currentPage={currentPage} />
+      </div>
     </div>
-  </Container>
+    <main class="col-span-6 overflow-auto py-4 pb-32 md:px-8">
+      <div>
+        <article id="article" class="content">
+          <section class="main-section prose prose-invert max-w-none">
+            <nav class="block sm:hidden"></nav>
+            <slot />
+          </section>
+        </article>
+      </div>
+    </main>
+    <div
+      class="col-span-3 flex flex-row md:sticky md:top-0 md:block md:h-screen"
+    >
+      <RightSidebar item={item} />
+    </div>
+  </div>
 </Layout>
 
 <script>

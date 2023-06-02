@@ -1,0 +1,14 @@
+---
+import TableOfContents from "./TableOfContents.astro";
+const { item } = Astro.props;
+---
+
+{
+  item.headings.length > 1 && (
+    <nav aria-labelledby="grid-right" class="invisible md:visible">
+      <div class="px-8">
+        <TableOfContents headings={item.headings} />
+      </div>
+    </nav>
+  )
+}

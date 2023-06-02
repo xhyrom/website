@@ -1,0 +1,66 @@
+---
+import { docs, type Sidebar } from "@pages/docs/config";
+const { currentPage } = Astro.props;
+const currentPageMatch = currentPage.slice(1);
+
+const isCurrentPage = (item: Sidebar) => {
+  if (item.link) {
+    return item.link.includes(currentPageMatch);
+  }
+  return false;
+};
+
+const getLinkClasses = (link: Sidebar) => {
+  const baseClasses =
+    "block py-2 px-6  my-1 transition-colors border-l hover:border-slate-300 hover:text-slate-300";
+
+  if (isCurrentPage(link)) {
+    return baseClasses + " border-slate-300 text-slate-100";
+  } else {
+    return baseClasses + " text-slate-400";
+  }
+};
+---
+
+<aside title="Site Navigation">
+  <div class="absolute z-10 text-white md:hidden">
+    <button id="sidebar-show" class="p-4 pl-2">
+      <span class="sr-only">sidebar menu</span>
+      <img
+        src={"/icons/chevrons-right.svg"}
+        alt="sidebar hamburger menu icon"
+        id="open-arrow"
+        class="h-6 w-6 duration-200"
+      />
+    </button>
+  </div>
+  <!--<nav aria-labelledby="grid-left" class="w-64 border-r p-4">-->
+  <nav
+    id="sidebar"
+    aria-labelledby="grid-left"
+    class="bg-dark-r w-64 -translate-x-full p-4 transition-transform duration-200 md:visible md:translate-x-0 md:bg-transparent"
+  >
+    <ul>
+      {
+        docs.sidebar.map((item) =>
+          item.header ? (
+            <h2 class="mt-4 font-semibold text-white">{item.text}</h2>
+          ) : (
+            <li class={getLinkClasses(item)}>
+              <a href={item.link}>{item.text}</a>
+            </li>
+          )
+        )
+      }
+    </ul>
+  </nav>
+</aside>
+
+<script is:inline>
+  window.addEventListener("DOMContentLoaded", (event) => {
+    var target = document.querySelector('[aria-current="page"]');
+    if (target && target.offsetTop > window.innerHeight - 100) {
+      document.querySelector(".nav-groups").scrollTop = target.offsetTop;
+    }
+  });
+</script>

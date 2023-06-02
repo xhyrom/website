@@ -1,0 +1,38 @@
+---
+const { headings } = Astro.props;
+
+const parseDepth = (depth: number) => {
+  switch (depth) {
+    case 1:
+      return "ml-0";
+    case 2:
+      return "ml-4";
+    case 3:
+      return "ml-8";
+    case 4:
+      return "ml-12";
+    case 5:
+      return "ml-16";
+    case 6:
+      return "ml-20";
+    default:
+      return "ml-0";
+  }
+};
+---
+
+<ul class="mt-24 flex flex-col gap-4">
+  {
+    headings.map(({ slug, text, depth }: {
+      slug: string;
+      text: string;
+      depth: number;
+    }) => {
+      return (
+        <li class={`text-slate-100 hover:text-slate-700 ${parseDepth(depth)}`}>
+          <a href={`#${slug}`}>{text}</a>
+        </li>
+      );
+    })
+  }
+</ul>
