@@ -9,10 +9,9 @@ export default (): AstroIntegration => {
     hooks: {
       "astro:build:done": async (opts) => {
         for (const route of opts.routes) {
-          const content = await readFile(
-            fileURLToPath(route.distURL!),
-            "utf-8"
-          );
+          if (!route.distURL) continue;
+
+          const content = await readFile(fileURLToPath(route.distURL), "utf-8");
           const minified = await minify(content, {
             removeAttributeQuotes: true,
             collapseWhitespace: true,
