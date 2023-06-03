@@ -31,8 +31,7 @@ The `footer` is optional. The [Commit Message Footer](#commit-footer) format des
   │       │      │
   │       │      └─⫸ Exclamation mark: breaking change
   │       │
-  │       └─⫸ Commit Scope: layouts|components|components-widgets|components-atoms|pages
-  │                          pages-blog|pages-docs|scripts|assets
+  │       └─⫸ Commit Scope: layouts|components|pages|scripts|assets|docs
   │
   └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|test
 ```
@@ -61,13 +60,10 @@ The following is the list of supported scopes:
 
 - `layouts`
 - `components`
-- `components-widgets`
-- `components-atoms`
 - `pages`
-- `pages-blog`
-- `pages-docs`
 - `scripts`
 - `assets`
+- `docs`
 
 There are currently a few exceptions to the "use package name" rule:
 
