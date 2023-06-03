@@ -48,8 +48,10 @@ Represents the rollout of an experiment
 | ------------------- | --------------------------------------------------------- | ------------------------------------------- |
 | revision            | integer                                                   | Current version fo the rollout              |
 | populations         | array of [rollout population](#rollout-population-object) | The experiment rollout's populations        |
-| overrides           | array of [rollout override](#rollout-override-object)     | The experiment rollout's overrides          |
+| overrides *         | map\[string\]\[array of string\]                          | The experiment rollout's overrides          |
 | overrides_formatted | array of [rollout population](#rollout-population-object) | Additional experiment rollout's populations |
+
+\* Map key is bucket id and value is array of guild ids
 
 ## Rollout Population Object
 
@@ -57,79 +59,97 @@ Represents a population of an experiment rollout. The population object specifie
 
 **Rollout Population Structure:**
 
-| field   | type                                                            | description |
-| ------- | --------------------------------------------------------------- | ----------- |
-| buckets | map\[string\]\[[population bucket](#population-bucket-object)\] |             |
-| filters | array of [population filter](#population-filter-object)         |             |
+| field   | type                                                            | description            |
+| ------- | --------------------------------------------------------------- | ---------------------- |
+| buckets | map\[string\]\[[population bucket](#population-bucket-object)\] | The population buckets |
+| filters | array of [population filter](#population-filter-object)         | Population filters     |
 
-## Population Bucket Object
+### Population Bucket Object
 
-Represents a bucket of a population of an experiment rollout.
+Represents a bucket of a population of an experiment rollout. Bucket contains a rollout.
 
 **Population Bucket Structure:**
 
-| field   | type                                                                    | description |
-| ------- | ----------------------------------------------------------------------- | ----------- |
-| rollout | array of [population bucket rollout](#population-bucket-rollout-object) |             |
+| field   | type                                                                    | description                  |
+| ------- | ----------------------------------------------------------------------- | ---------------------------- |
+| rollout | array of [population bucket rollout](#population-bucket-rollout-object) | The bucket rollouts (ranges) |
 
 ### Population Bucket Rollout Object
 
-Represents a rollout of a bucket of a population of an experiment rollout.
+Represents a rollout of a bucket of a population of an experiment rollout. Rollout contains a range, start and end.
 
 **Population Bucket Rollout Structure:**
 
-| field | type    | description |
-| ----- | ------- | ----------- |
-| start | integer |             |
-| end   | integer |             |
+| field | type    | description             |
+| ----- | ------- | ----------------------- |
+| start | integer | The start of this range |
+| end   | integer | The end of this range   |
 
-## Population Filter Object
+### Population Filter Object
 
 Represents a filter of a population of an experiment rollout.
 
 **Population Filter Structure:**
 
-| field | type   | description |
-| ----- | ------ | ----------- |
-| type  | string |             |
+| field | type   | description     |
+| ----- | ------ | --------------- |
+| type  | string | The filter type |
 
-type is **guild_has_feature**
-| field    | type             | description |
-| -------- | ---------------- | ----------- |
-| features | ?array of string |             |
+#### type is **guild_has_feature**
+The guild features required for eligiblity
 
-type is **guild_id_range**
-| field  | type     | description |
-| ------ | -------- | ----------- |
-| min_id | ?integer |             |
-| max_id | integer  |             |
+| field    | type             | description                                                                                                |
+| -------- | ---------------- | ---------------------------------------------------------------------------------------------------------- |
+| features | ?array of string | Contains [Guild Features](https://discord.com/developers/docs/resources/guild#guild-object-guild-features) |
 
-type is **guild_member_count_range**
-| field     | type     | description |
-| --------- | -------- | ----------- |
-| min_count | ?integer |             |
-| max_count | integer  |             |
+#### type is **guild_id_range**
+The range of snowflake resource Ids that are eligible
 
-type is **guild_ids**
-| field | type             | description |
-| ----- | ---------------- | ----------- |
-| ids   | ?array of string |             |
+| field  | type     | description      |
+| ------ | -------- | ---------------- |
+| min_id | ?integer | Minimum guild id |
+| max_id | integer  | Maximum guild id |
 
-type is **guild_hub_types**
-| field     | type              | description |
-| --------- | ----------------- | ----------- |
-| hub_types | ?array of integer |             |
+#### type is **guild_member_count_range**
+The range of guild member counts that are eligible
 
-type is **guild_has_vanity_url**
-| field      | type     | description |
-| ---------- | -------- | ----------- |
-| has_vanity | ?boolean |             |
+| field     | type     | description          |
+| --------- | -------- | -------------------- |
+| min_count | ?integer | Minimum member count |
+| max_count | integer  | Maximum member count |
 
-type is **guild_in_range_by_hash**
-| field    | type    | description |
-| -------- | ------- | ----------- |
-| hash_key | ?number |             |
-| target   | ?number |             |
+#### type is **guild_ids**
+The list of snowflake resource IDs that are eligible
+
+| field | type             | description        |
+| ----- | ---------------- | ------------------ |
+| ids   | ?array of string | Contains Guild Ids |
+
+#### type is **guild_hub_types**
+The types of hubs that is eligible
+
+| field     | type              | description   |
+| --------- | ----------------- | ------------- |
+| hub_types | ?array of integer | Types of hubs |
+
+0. Default
+1. High School
+2. College
+
+#### type is **guild_has_vanity_url**
+Whether a vanity is or is not required for eligibility
+
+| field      | type     | description                      |
+| ---------- | -------- | -------------------------------- |
+| has_vanity | ?boolean | Whether the guild has vanity url |
+
+#### type is **guild_in_range_by_hash**
+If the guild experiment hash (murmurhash v3 unsigned of `experiment_name:guild_id` % 1e4) is greater than `hash_key`, it is eligible
+
+| field    | type    | description      |
+| -------- | ------- | ---------------- |
+| hash_key | ?number | Minimum hash key |
+| target   | ?number | Unknown          |
 
 ## Fetching all experiments
 
@@ -149,6 +169,8 @@ You can fetch experiments from the API by sending a GET request to [https://api.
 GET https://api.discord-experiments.xhyrom.dev/v2/experiments
 ```
 
+Returns array of [Experiment Object](#experiment-object)
+
 ## Fetching experiment
 
 You can fetch a specific experiment from the API by sending a GET request to [https://api.discord-experiments.xhyrom.dev/v2/experiments/:experimentId](https://api.discord-experiments.xhyrom.dev/v2/experiments/:experimentId).
@@ -159,3 +181,4 @@ You can use same query parameters as in [Fetching all experiments](#fetching-all
 GET https://api.discord-experiments.xhyrom.dev/v2/experiments/:experimentId
 ```
 
+Returns [Experiment Object](#experiment-object)
