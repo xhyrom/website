@@ -24,7 +24,7 @@ export const socials = [
     link: "https://ko-fi.com/xhyrom",
     icon: "ko-fi.png",
   },
-] as {
+] satisfies {
   name: string;
   link: string;
   icon: string;
@@ -128,9 +128,10 @@ export const skills = [
     name: "IntelliJ IDEA",
     icon: "logos:intellij-idea",
   },
-] as {
+] satisfies {
   name: string;
   icon: string;
+  color?: string;
 }[];
 
 export const projects = [
@@ -209,7 +210,7 @@ export const projects = [
     link: "https://github.com/xHyroM/spawnergenz",
     desc: "Spawner Genz is a plugin that modifies the functionality of spawners so that they don't spawn entities, but instead store drops in a virtual storag in which you can then sell or move everything to your inventory.",
   },
-] as {
+] satisfies {
   name: string;
   link: string;
   desc: string;
