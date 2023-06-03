@@ -8,7 +8,11 @@ const item = Astro.props;
 const currentPage = new URL(Astro.request.url).pathname;
 ---
 
-<Layout title={`Docs - ${item.content.title}`} description={item.content.description} url={`https://xhyrom.dev${item.url}`}>
+<Layout
+  title={`Docs - ${item.content.title}`}
+  description={item.content.description}
+  url={`https://xhyrom.dev${item.url}`}
+>
   <Navbar />
 
   <div class="grid grid-cols-12">
@@ -38,5 +42,5 @@ const currentPage = new URL(Astro.request.url).pathname;
 </Layout>
 
 <script>
-  import "../../scripts/sidebarToggle.js";
+  import "@scripts/sidebarToggle.js";
 </script>

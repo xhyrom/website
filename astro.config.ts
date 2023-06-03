@@ -50,6 +50,7 @@ export default defineConfig({
         "~": resolve(__dirname, "./src"),
         "@pages": resolve(__dirname, "./src/pages"),
         "@assets": resolve(__dirname, "./src/assets"),
+        "@scripts": resolve(__dirname, "./src/scripts"),
         "@layouts": resolve(__dirname, "./src/layouts"),
         "@components": resolve(__dirname, "./src/components"),
       },

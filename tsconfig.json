@@ -6,6 +6,7 @@
       "~/*": ["src/*"],
       "@pages/*": ["src/pages/*"],
       "@assets/*": ["src/assets"],
+      "@scripts/*": ["src/scripts"],
       "@layouts/*": ["src/layouts/*"],
       "@components/*": ["src/components/*"]
     }
