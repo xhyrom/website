@@ -23,16 +23,24 @@ const parseDepth = (depth: number) => {
 
 <ul class="mt-24 flex flex-col gap-4">
   {
-    headings.map(({ slug, text, depth }: {
-      slug: string;
-      text: string;
-      depth: number;
-    }) => {
-      return (
-        <li class={`text-slate-100 hover:text-slate-700 ${parseDepth(depth)}`}>
-          <a href={`#${slug}`}>{text}</a>
-        </li>
-      );
-    })
+    headings.map(
+      ({
+        slug,
+        text,
+        depth,
+      }: {
+        slug: string;
+        text: string;
+        depth: number;
+      }) => {
+        return (
+          <li
+            class={`text-slate-100 hover:text-slate-700 ${parseDepth(depth)}`}
+          >
+            <a href={`#${slug}`}>{text}</a>
+          </li>
+        );
+      }
+    )
   }
 </ul>

@@ -3,8 +3,11 @@ import Layout from "@layouts/Layout.astro";
 import Navbar from "@components/widgets/Navbar.astro";
 import Container from "@components/atoms/Container.astro";
 import Button from "~/components/widgets/Button.astro";
+import type { PaginateFunction } from "astro";
 
-export async function getStaticPaths({ paginate }) {
+export async function getStaticPaths({ paginate }: {
+    paginate: PaginateFunction;
+}) {
   // Load your data with fetch(), Astro.glob(), etc.
   const posts = (await Astro.glob('@blog/*.md')).sort(
 	(a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()

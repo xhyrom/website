@@ -8,13 +8,30 @@ const { item } = Astro.props;
 const url = Astro.url.pathname;
 ---
 
-<Layout description={item.frontmatter.title} date={item.frontmatter.date} url={`https://xhyrom.dev${url}`}>
+<Layout
+  description={item.frontmatter.title}
+  date={item.frontmatter.date}
+  url={`https://xhyrom.dev${url}`}
+>
   <Navbar />
-  <h1 class="w-full py-32 text-center text-5xl font-extrabold text-white">
-    {item.frontmatter.title}
-  </h1>
+  <div class="w-full py-32">
+    <div class="flex flex-col items-center justify-center gap-2">
+      <h1 class="text-5xl font-extrabold text-white">
+        {item.frontmatter.title}
+      </h1>
+      <h2 class="text-2xl font-semibold text-white text-opacity-40">
+        {
+          new Date(item.frontmatter.date).toLocaleDateString("en-us", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          })
+        }
+      </h2>
+    </div>
+  </div>
 
-  <Container class="prose prose-invert text-2xl content-center justify-center">
+  <Container class="prose prose-invert content-center justify-center text-2xl">
     <article>
       <slot />
     </article>
