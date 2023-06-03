@@ -23,5 +23,9 @@ export const docs: Docs = {
       text: "Eligible",
       link: "/docs/discord-experiments-api/eligible",
     },
+    {
+      text: "Stats",
+      link: "/docs/discord-experiments-api/stats",
+    }
   ],
 };
