@@ -1,7 +1,7 @@
 ---
-title: "How I lost my laptop for 2 months: a story of warranty and unpleasant surprises"
+title: How I lost my laptop for 2 months
+description: A story of warranty and unpleasant surprises.
 date: February 24 2023
-layout: ../../../layouts/blog/PostLayout.astro
 ---
 
 Hey, guys,

@@ -1,7 +1,6 @@
 ---
 title: Happy New Year 2023
 date: January 01 2023
-layout: ../../../layouts/blog/PostLayout.astro
 ---
 
 Hey! Hey! Hey!

@@ -18,6 +18,10 @@
     {
       "source": "/docs/",
       "destination": "/docs/discord-experiments-api/introduction"
+    },
+    {
+      "source": "/blog/:name",
+      "destination": "/blog/posts/:name"
     }
   ]
 }

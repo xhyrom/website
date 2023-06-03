@@ -49,6 +49,7 @@ export default defineConfig({
       alias: {
         "~": resolve(__dirname, "./src"),
         "@docs": resolve(__dirname, "./docs"),
+        "@blog": resolve(__dirname, "./blog"),
         "@pages": resolve(__dirname, "./src/pages"),
         "@assets": resolve(__dirname, "./src/assets"),
         "@scripts": resolve(__dirname, "./src/scripts"),

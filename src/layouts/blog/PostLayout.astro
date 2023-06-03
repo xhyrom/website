@@ -3,31 +3,20 @@ import Container from "@components/atoms/Container.astro";
 import Navbar from "@components/widgets/Navbar.astro";
 import Layout from "@layouts/Layout.astro";
 
-export interface Props {
-  content: {
-    title: string;
-    date: string;
-  };
-}
-
-const {
-  content: { title, date },
-} = Astro.props;
+const { item } = Astro.props;
 
 const url = Astro.url.pathname;
 ---
 
-<Layout description={title} date={date} url={`https://xhyrom.dev${url}`}>
+<Layout description={item.frontmatter.title} date={item.frontmatter.date} url={`https://xhyrom.dev${url}`}>
   <Navbar />
   <h1 class="w-full py-32 text-center text-5xl font-extrabold text-white">
-    {title}
+    {item.frontmatter.title}
   </h1>
 
-  <Container>
-    <main class="prose prose-invert text-2xl">
-      <article>
-        <slot />
-      </article>
-    </main>
+  <Container class="prose prose-invert text-2xl content-center justify-center">
+    <article>
+      <slot />
+    </article>
   </Container>
 </Layout>

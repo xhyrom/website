@@ -210,7 +210,7 @@ export const projects = [
     link: "https://github.com/xHyroM/spawnergenz",
     desc: "Spawner Genz is a plugin that modifies the functionality of spawners so that they don't spawn entities, but instead store drops in a virtual storag in which you can then sell or move everything to your inventory.",
   },
-] satisfies {
+] as {
   name: string;
   link: string;
   desc: string;

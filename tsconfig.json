@@ -5,6 +5,7 @@
     "paths": {
       "~/*": ["src/*"],
       "@docs/*": ["docs/*"],
+      "@blog/*": ["blog/*"],
       "@pages/*": ["src/pages/*"],
       "@assets/*": ["src/assets"],
       "@scripts/*": ["src/scripts"],

@@ -3,6 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import Navbar from "@components/widgets/Navbar.astro";
 import Container from "@components/atoms/Container.astro";
 import { projects } from "~/config";
+import Button from "~/components/widgets/Button.astro";
 
 for (const project of projects) {
   try {
@@ -87,24 +88,21 @@ projects.sort((a, b) => a.name.localeCompare(b.name));
 
             <p class="mb-6 break-all text-neutral-300">{project.desc}</p>
             <div>
-              <a
-                href={project.link}
-                class="bottom-0  inline-flex w-fit rounded-md bg-neutral-800 px-6 py-2 text-neutral-300 transition-colors duration-100 hover:bg-neutral-700 [&_img]:transition-all [&_img]:hover:translate-x-[2px]"
-              >
-                GitHub{" "}
-                <img
-                  src="/icons/arrow-up-right.svg"
-                  class="ml-2 mt-[1px] h-[23px] w-5"
-                  alt=""
-                />
-              </a>
-              <a
-                href={project.link}
-                class=" bottom-0 inline-flex  w-fit translate-y-[6px] px-6 py-2 text-neutral-300 transition-all duration-100 hover:-translate-y-[-4px] hover:text-neutral-200"
-              >
-                <img src="/icons/book-open.svg" class="mr-2 h-6 w-5" alt="" />
-                Docs{" "}
-              </a>
+              <Button
+                label="GitHub"
+                link={project.link}
+                type="primary"
+                icon="/icons/arrow-up-right.svg"
+                iconClass="ml-2 mt-[1px] h-[23px] w-5"
+              />
+              <Button
+                label="Docs"
+                link={project.link}
+                type="secondary"
+                icon="/icons/book-open.svg"
+                iconClass="mr-2 h-6 w-5"
+                iconPosition="left"
+              />
             </div>
           </section>
         ))

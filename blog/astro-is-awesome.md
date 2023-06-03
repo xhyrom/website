@@ -1,7 +1,6 @@
 ---
 title: Astro is awesome
 date: January 07 2023
-layout: ../../../layouts/blog/PostLayout.astro
 ---
 
 Last year 😄 I discovered the Astro static html framework and after a few hours I fell in love with it. Astro is simple and easy to use, but at the same time it has all the features I need to create professional websites.
