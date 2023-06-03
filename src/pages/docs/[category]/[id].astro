@@ -1,0 +1,29 @@
+---
+import ItemLayout from "@layouts/docs/ItemLayout.astro";
+
+export async function getStaticPaths() {
+  const docs = await Astro.glob("@docs/**/*.md");
+
+  return docs.map((doc) => {
+    const path = doc.file.split("/docs/")[1];
+    const [categoryId, docId] = path.split("/");
+
+    return {
+      params: {
+        category: categoryId,
+        id: docId.replace(".md", ""),
+      },
+      props: {
+        ...doc,
+        url: `/docs/${categoryId}/${docId.replace(".md", "")}`,
+      },
+    };
+  });
+}
+
+const item = Astro.props;
+---
+
+<ItemLayout item={item}>
+  <div set:html={item.compiledContent()} />
+</ItemLayout>

@@ -1,7 +1,6 @@
 ---
 title: Introduction
 description: Introduction to the Discord Experiments API
-layout: ../../../layouts/docs/ItemLayout.astro
 ---
 
 # Introduction

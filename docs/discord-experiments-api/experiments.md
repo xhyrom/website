@@ -1,7 +1,6 @@
 ---
 title: Experiments
 description: How to fetch experiments from the API
-layout: ../../../layouts/docs/ItemLayout.astro
 ---
 
 # Experiments

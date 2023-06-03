@@ -4,13 +4,13 @@ import RightSidebar from "@components/widgets/docs/RightSidebar.astro";
 import Navbar from "@components/widgets/Navbar.astro";
 import Layout from "@layouts/Layout.astro";
 
-const item = Astro.props;
+const { item } = Astro.props;
 const currentPage = new URL(Astro.request.url).pathname;
 ---
 
 <Layout
-  title={`Docs - ${item.content.title}`}
-  description={item.content.description}
+  title={`Docs - ${item.frontmatter.title}`}
+  description={item.frontmatter.description}
   url={`https://xhyrom.dev${item.url}`}
 >
   <Navbar />
