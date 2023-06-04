@@ -17,13 +17,13 @@ const currentPage = new URL(Astro.request.url).pathname;
 
   <div class="grid grid-cols-12">
     <div
-      class="col-span-3 flex flex-row md:sticky md:top-0 md:h-screen md:pt-12"
+      class="col-span-3 flex flex-row md:sticky md:top-0 md:h-screen md:pt-4"
     >
       <div class="ml-auto">
         <LeftSidebar currentPage={currentPage} />
       </div>
     </div>
-    <main class="col-span-6 overflow-auto py-4 pb-32 md:px-8">
+    <main class="col-span-6 overflow-auto py-12">
       <div>
         <article id="article" class="content">
           <section class="main-section prose prose-invert max-w-none">
@@ -34,7 +34,7 @@ const currentPage = new URL(Astro.request.url).pathname;
       </div>
     </main>
     <div
-      class="col-span-3 flex flex-row md:sticky md:top-0 md:block md:h-screen"
+      class="col-span-3 flex flex-row md:sticky md:top-0 md:h-screen md:pt-4"
     >
       <RightSidebar item={item} />
     </div>

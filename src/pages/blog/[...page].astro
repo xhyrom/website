@@ -40,7 +40,7 @@ const posts = page.data as {
         <main>
             {posts.map(post => {
                 return (
-                    <a class="text-2xl font-semibold text-hyroGold text-opacity-80 mb-4 break-all" href={post.url}>{post.frontmatter.title}</a>
+                    <a class="text-2xl font-semibold text-gold text-opacity-80 mb-4 break-all" href={post.url}>{post.frontmatter.title}</a>
                     <p class="text-1xl text-opacity-40 text-white italic break-all">
                         {new Date(post.frontmatter.date).toLocaleDateString('en-us', {
                             year: 'numeric',
@@ -49,7 +49,7 @@ const posts = page.data as {
                         })}
                     </p>
                     <p class="text-1xl text-white break-all">{post.frontmatter.description}</p>
-                    <hr class="mt-4 mb-4 text-gray" />
+                    <hr class="mt-4 mb-4 text-dark-200" />
                 )
             })}
 

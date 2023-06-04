@@ -1,15 +1,28 @@
 ---
-import TableOfContents from "./TableOfContents.astro";
+import TableOfContents from "./TableOfContents";
+
 const { item } = Astro.props;
 
-const headings = item.getHeadings();
+interface Props {
+  item: {
+    getHeadings: () => {
+      depth: number;
+      slug: string;
+      text: string;
+    }[];
+  };
+}
+
+const headings = item
+  .getHeadings()
+  .filter(({ depth }) => depth > 1 && depth < 4);
 ---
 
 {
   headings.length > 1 && (
-    <nav aria-labelledby="grid-right" class="invisible md:visible">
-      <div class="px-8">
-        <TableOfContents headings={headings} />
+    <nav aria-labelledby="grid-right" class="p-4 invisible md:visible">
+      <div class="pl-8">
+        <TableOfContents headings={headings} client:idle />
       </div>
     </nav>
   )

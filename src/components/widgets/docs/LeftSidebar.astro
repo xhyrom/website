@@ -11,13 +11,14 @@ const isCurrentPage = (item: Sidebar) => {
 };
 
 const getLinkClasses = (link: Sidebar) => {
-  const baseClasses =
-    "block py-2 px-6  my-1 transition-colors border-l hover:border-slate-300 hover:text-slate-300";
+  const baseClasses = "py-1 px-6 my-1 transition-colors border-l -ml-px pl-4";
 
   if (isCurrentPage(link)) {
-    return baseClasses + " border-slate-300 text-slate-100";
+    return baseClasses + " border-gold text-gold";
   } else {
-    return baseClasses + " text-slate-400";
+    return (
+      baseClasses + " border-transparent text-gray-100 hover:text-gray-200"
+    );
   }
 };
 ---
@@ -39,11 +40,11 @@ const getLinkClasses = (link: Sidebar) => {
     aria-labelledby="grid-left"
     class="bg-dark-r w-64 -translate-x-full p-4 transition-transform duration-200 md:visible md:translate-x-0 md:bg-transparent"
   >
-    <ul>
+    <ul class="border-l border-dark-300">
       {
         docs.sidebar.map((item) =>
           item.header ? (
-            <li class="mt-4 font-semibold text-white">{item.text}</li>
+            <li class="mt-4 pl-4 font-semibold text-white">{item.text}</li>
           ) : (
             <li class={getLinkClasses(item)}>
               <a href={item.link}>{item.text}</a>
