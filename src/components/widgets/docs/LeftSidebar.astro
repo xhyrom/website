@@ -43,7 +43,7 @@ const getLinkClasses = (link: Sidebar) => {
       {
         docs.sidebar.map((item) =>
           item.header ? (
-            <h2 class="mt-4 font-semibold text-white">{item.text}</h2>
+            <li class="mt-4 font-semibold text-white">{item.text}</li>
           ) : (
             <li class={getLinkClasses(item)}>
               <a href={item.link}>{item.text}</a>
