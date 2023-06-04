@@ -42,17 +42,20 @@ const getLinkClasses = (link: SidebarItem) => {
     aria-labelledby="grid-left"
     class="bg-dark-r w-64 -translate-x-full p-4 transition-transform duration-200 md:visible md:translate-x-0 md:bg-transparent"
   >
-    <ul class="border-l border-dark-300">
+    <ul>
       {
-        docs.sidebar.map((item) =>
-          item.header ? (
-            <li class="mt-4 pl-4 font-semibold text-white">{item.text}</li>
-          ) : (
-            <li class={getLinkClasses(item)}>
-              <a href={item.link}>{item.text}</a>
-            </li>
-          )
-        )
+        docs.sidebar.map(({ text, items }) => (
+          <>
+            <li class="mt-4 font-semibold text-white">{text}</li>
+            <ul class="border-l border-dark-300">
+              {items.map((item) => (
+                <li class={getLinkClasses(item)}>
+                  <a href={item.link}>{item.text}</a>
+                </li>
+              ))}
+            </ul>
+          </>
+        ))
       }
     </ul>
   </nav>
