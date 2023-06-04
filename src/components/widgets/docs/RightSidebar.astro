@@ -20,7 +20,7 @@ const headings = item
 
 {
   headings.length > 1 && (
-    <nav aria-labelledby="grid-right" class="p-4 invisible md:visible">
+    <nav aria-labelledby="grid-right" class="invisible p-4 md:visible">
       <div class="pl-8">
         <TableOfContents headings={headings} client:idle />
       </div>

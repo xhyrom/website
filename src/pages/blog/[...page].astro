@@ -5,58 +5,93 @@ import Container from "@components/atoms/Container.astro";
 import Button from "~/components/widgets/Button.astro";
 import type { PaginateFunction } from "astro";
 
-export async function getStaticPaths({ paginate }: {
-    paginate: PaginateFunction;
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: PaginateFunction;
 }) {
   // Load your data with fetch(), Astro.glob(), etc.
-  const posts = (await Astro.glob('@blog/*.md')).sort(
-	(a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
-).map((post) => ({
-    ...post,
-    url: `/blog/posts/${post.file.split("/blog/")[1].split("/")[0].replace(".md", "")}`,
-}));
+  const posts = (await Astro.glob("@blog/*.md"))
+    .sort(
+      (a, b) =>
+        new Date(b.frontmatter.date).valueOf() -
+        new Date(a.frontmatter.date).valueOf()
+    )
+    .map((post) => ({
+      ...post,
+      url: `/blog/posts/${post.file
+        .split("/blog/")[1]
+        .split("/")[0]
+        .replace(".md", "")}`,
+    }));
 
   return paginate(posts, { pageSize: 3 });
 }
 
 const { page } = Astro.props;
 const posts = page.data as {
-    url: string;
-    frontmatter: {
-        title: string;
-        date: string;
-        description: string;
-    };
+  url: string;
+  frontmatter: {
+    title: string;
+    date: string;
+    description: string;
+  };
 }[];
 ---
 
 <Layout>
-    <Navbar />
-    <h1 class="text-white text-5xl w-full text-center py-32 font-extrabold">
-        Blog
-    </h1>
+  <Navbar />
+  <h1 class="w-full py-32 text-center text-5xl font-extrabold text-white">
+    Blog
+  </h1>
 
-    <Container class="flex content-center justify-center">
-        <main>
-            {posts.map(post => {
-                return (
-                    <a class="text-2xl font-semibold text-gold text-opacity-80 mb-4 break-all" href={post.url}>{post.frontmatter.title}</a>
-                    <p class="text-1xl text-opacity-40 text-white italic break-all">
-                        {new Date(post.frontmatter.date).toLocaleDateString('en-us', {
-                            year: 'numeric',
-                            month: 'short',
-                            day: 'numeric',
-                        })}
-                    </p>
-                    <p class="text-1xl text-white break-all">{post.frontmatter.description}</p>
-                    <hr class="mt-4 mb-4 text-dark-200" />
-                )
-            })}
+  <Container class="flex content-center justify-center">
+    <main>
+      {
+        posts.map((post) => {
+          return (
+            <>
+              <a
+                class="mb-4 break-all text-2xl font-semibold text-gold text-opacity-80"
+                href={post.url}
+              >
+                {post.frontmatter.title}
+              </a>
+              <p class="text-1xl break-all italic text-white text-opacity-40">
+                {new Date(post.frontmatter.date).toLocaleDateString("en-us", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </p>
+              <p class="text-1xl break-all text-white">
+                {post.frontmatter.description}
+              </p>
+              <hr class="mb-4 mt-4 text-dark-200" />
+            </>
+          );
+        })
+      }
 
-            <div class="flex flex-row gap-3">
-                <Button label="Previous" link={page.url.prev} type="primary" icon="/icons/chevrons-right.svg" iconClass="mr-2 h-6 w-5 rotate-180" iconPosition="left" disabled={!page.url.prev} />
-                <Button label="Next" link={page.url.next} type="primary" icon="/icons/chevrons-right.svg" iconClass="ml-2 mt-[1px] h-[23px] w-5" disabled={!page.url.next} />
-            </div>
-        </main>
-    </Container>
+      <div class="flex flex-row gap-3">
+        <Button
+          label="Previous"
+          link={page.url.prev}
+          type="primary"
+          icon="/icons/chevrons-right.svg"
+          iconClass="mr-2 h-6 w-5 rotate-180"
+          iconPosition="left"
+          disabled={!page.url.prev}
+        />
+        <Button
+          label="Next"
+          link={page.url.next}
+          type="primary"
+          icon="/icons/chevrons-right.svg"
+          iconClass="ml-2 mt-[1px] h-[23px] w-5"
+          disabled={!page.url.next}
+        />
+      </div>
+    </main>
+  </Container>
 </Layout>

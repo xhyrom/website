@@ -1,8 +1,8 @@
 export interface Docs {
-  sidebar: Sidebar[];
+  sidebar: SidebarItem[];
 }
 
-export interface Sidebar {
+export interface SidebarItem {
   text: string;
   header?: boolean;
   link?: string;
@@ -26,6 +26,6 @@ export const docs: Docs = {
     {
       text: "Stats",
       link: "/docs/discord-experiments-api/stats",
-    }
+    },
   ],
 };

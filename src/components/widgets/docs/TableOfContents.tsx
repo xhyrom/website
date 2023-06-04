@@ -99,8 +99,8 @@ const TableOfContents: FunctionalComponent<{ headings: MarkdownHeading[] }> = ({
           <li
             className={`border-l py-1 ${
               currentId === slug
-                ? "text-gold border-gold"
-                : "text-gray-100 hover:text-gray-200 border-transparent"
+                ? "border-gold text-gold"
+                : "border-transparent text-gray-100 hover:text-gray-200"
             }`}
           >
             <a

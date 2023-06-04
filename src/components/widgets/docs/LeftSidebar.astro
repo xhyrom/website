@@ -1,16 +1,18 @@
 ---
-import { docs, type Sidebar } from "@docs/config";
+import { docs, type SidebarItem } from "@docs/config";
 const { currentPage } = Astro.props;
-const currentPageMatch = currentPage.slice(1);
+const currentPageMatch = currentPage.slice(1).endsWith("/")
+  ? currentPage.slice(1).slice(0, -1)
+  : currentPage.slice(1);
 
-const isCurrentPage = (item: Sidebar) => {
+const isCurrentPage = (item: SidebarItem) => {
   if (item.link) {
     return item.link.includes(currentPageMatch);
   }
   return false;
 };
 
-const getLinkClasses = (link: Sidebar) => {
+const getLinkClasses = (link: SidebarItem) => {
   const baseClasses = "py-1 px-6 my-1 transition-colors border-l -ml-px pl-4";
 
   if (isCurrentPage(link)) {
