@@ -4,9 +4,10 @@ export interface Docs {
 
 export interface SidebarItem {
   text: string;
-  items: SidebarItem[] & {
+  items: {
+    text: string;
     link: string;
-  }[]
+  }[];
 }
 
 export const docs: Docs = {
