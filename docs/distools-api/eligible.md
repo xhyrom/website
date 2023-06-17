@@ -7,7 +7,7 @@ description: How to check if a guild is eligible for an experiment
 
 This section of the documentation will cover how to check if a guild is eligible for an experiment.
 
-Accessible on [https://api.discord-experiments.xhyrom.dev/v2/eligible](https://api.discord-experiments.xhyrom.dev/v2/eligible)
+Accessible on [https://api.distools.xhyrom.dev/v2/eligible](https://api.distools.xhyrom.dev/v2/eligible)
 
 ## Eligible Object
 
@@ -26,7 +26,7 @@ Represents the eligibility of a guild for an experiment
 
 ## Checking eligibility
 
-You can check if a guild is eligible for an experiment by sending a POST request to [https://api.discord-experiments.xhyrom.dev/v2/eligible](https://api.discord-experiments.xhyrom.dev/v2/eligible)
+You can check if a guild is eligible for an experiment by sending a POST request to [https://api.distools.xhyrom.dev/v2/eligible](https://api.distools.xhyrom.dev/v2/eligible)
 
 **Body:**
 
@@ -38,7 +38,7 @@ You can check if a guild is eligible for an experiment by sending a POST request
 \* Only `id`, `features` and `member_count` fields are checked and `id` is required
 
 ```
-POST https://api.discord-experiments.xhyrom.dev/v2/eligible
+POST https://api.distools.xhyrom.dev/v2/eligible
 
 {
   "experiment_id": "2023-03_clyde_ai",

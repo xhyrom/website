@@ -1,17 +1,17 @@
 ---
 title: Introduction
-description: Introduction to the Discord Experiments API
+description: Introduction to the Distools API
 ---
 
 # Introduction
 
-This section of the documentation will cover the basics of the Discord Experiments API, and how to use it.
+This section of the documentation will cover the basics of the Distools API, and how to use it.
 
-Accessible on [https://api.discord-experiments.xhyrom.dev/v2](https://api.discord-experiments.xhyrom.dev/v2)
+Accessible on [https://api.distools.xhyrom.dev/v2](https://api.distools.xhyrom.dev/v2)
 
-## What is the Discord Experiments API?
+## What is the Distools API?
 
-It's about the Discord Experiments API, which allows you to get information about Discord's experiments. It's a public API, so you don't need any token to use it.
+It's about the Distools API, which allows you to get information about Discord's experiments. It's a public API, so you don't need any token to use it.
 
 ## How it works?
 

@@ -13,23 +13,23 @@ export interface SidebarItem {
 export const docs: Docs = {
   sidebar: [
     {
-      text: "Discord Experiments API",
+      text: "Discord Tools API",
       items: [
         {
           text: "Introduction",
-          link: "/docs/discord-experiments-api/introduction",
+          link: "/docs/distools-api/introduction",
         },
         {
           text: "Experiments",
-          link: "/docs/discord-experiments-api/experiments",
+          link: "/docs/distools-api/experiments",
         },
         {
           text: "Eligible",
-          link: "/docs/discord-experiments-api/eligible",
+          link: "/docs/distools-api/eligible",
         },
         {
           text: "Stats",
-          link: "/docs/discord-experiments-api/stats",
+          link: "/docs/distools-api/stats",
         },
       ],
     },

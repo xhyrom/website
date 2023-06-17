@@ -20,6 +20,14 @@
       "destination": "/docs/discord-experiments-api/introduction"
     },
     {
+      "source": "/docs/discord-experiments-api",
+      "destination": "/docs/distools-api/introduction"
+    },
+    {
+      "source": "/docs/discord-experiments-api/:name",
+      "destination": "/docs/distools-api/:name"
+    },
+    {
       "source": "/blog/:name",
       "destination": "/blog/posts/:name"
     }

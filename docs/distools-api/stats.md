@@ -7,7 +7,7 @@ description: Get stats from the API
 
 This section of the documentation will cover how to get stats from the API.
 
-Accessible on [https://api.discord-experiments.xhyrom.dev/v2/stats](https://api.discord-experiments.xhyrom.dev/v2/stats)
+Accessible on [https://api.distools.xhyrom.dev/v2/stats](https://api.distools.xhyrom.dev/v2/stats)
 
 ## Stats Object
 
@@ -35,10 +35,10 @@ Represents number of experiments by kind
 
 ## Fetching stats
 
-You can fetch stats from the API by sending a GET request to [https://api.discord-experiments.xhyrom.dev/v2/stats](https://api.discord-experiments.xhyrom.dev/v2/stats)
+You can fetch stats from the API by sending a GET request to [https://api.distools.xhyrom.dev/v2/stats](https://api.distools.xhyrom.dev/v2/stats)
 
 ```
-GET https://api.discord-experiments.xhyrom.dev/v2/stats
+GET https://api.distools.xhyrom.dev/v2/stats
 ```
 
 Returns a [stats object](#stats-object)

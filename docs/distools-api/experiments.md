@@ -7,7 +7,7 @@ description: How to fetch experiments from the API
 
 This section of the documentation will cover how to fetch experiments from the API.
 
-Accessible on [https://api.discord-experiments.xhyrom.dev/v2/experiments](https://api.discord-experiments.xhyrom.dev/v2/experiments)
+Accessible on [https://api.distools.xhyrom.dev/v2/experiments](https://api.distools.xhyrom.dev/v2/experiments)
 
 ## Experiment Object
 
@@ -153,7 +153,7 @@ If the guild experiment hash (murmurhash v3 unsigned of `experiment_name:guild_i
 
 ## Fetching all experiments
 
-You can fetch experiments from the API by sending a GET request to [https://api.discord-experiments.xhyrom.dev/v2/experiments](https://api.discord-experiments.xhyrom.dev/v2/experiments).
+You can fetch experiments from the API by sending a GET request to [https://api.distools.xhyrom.dev/v2/experiments](https://api.distools.xhyrom.dev/v2/experiments).
 
 **Query parameters:**
 | Name                  | Type            | Description                                                   |
@@ -166,19 +166,19 @@ You can fetch experiments from the API by sending a GET request to [https://api.
 \* If you want multiple kinds, you can separate them with a comma (,)
 
 ```
-GET https://api.discord-experiments.xhyrom.dev/v2/experiments
+GET https://api.distools.xhyrom.dev/v2/experiments
 ```
 
 Returns array of [Experiment Object](#experiment-object)
 
 ## Fetching experiment
 
-You can fetch a specific experiment from the API by sending a GET request to [https://api.discord-experiments.xhyrom.dev/v2/experiments/:experimentId](https://api.discord-experiments.xhyrom.dev/v2/experiments/:experimentId).
+You can fetch a specific experiment from the API by sending a GET request to [https://api.distools.xhyrom.dev/v2/experiments/:experimentId](https://api.distools.xhyrom.dev/v2/experiments/:experimentId).
 
 You can use same query parameters as in [Fetching all experiments](#fetching-all-experiments)
 
 ```
-GET https://api.discord-experiments.xhyrom.dev/v2/experiments/:experimentId
+GET https://api.distools.xhyrom.dev/v2/experiments/:experimentId
 ```
 
 Returns [Experiment Object](#experiment-object)
