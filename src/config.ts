@@ -84,6 +84,10 @@ export const skills = [
     icon: "vscode-icons:file-type-go-aqua",
   },
   {
+    name: "Prisma Client",
+    icon: "skill-icons:prisma",
+  },
+  {
     name: "MySQL",
     icon: "logos:mysql-icon",
   },
