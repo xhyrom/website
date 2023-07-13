@@ -2,10 +2,10 @@
 import Layout from "@layouts/Layout.astro";
 import Navbar from "@components/widgets/Navbar.astro";
 import Container from "@components/atoms/Container.astro";
-import { projects } from "~/config";
+import { PROJECTS } from "~/config";
 import Button from "~/components/widgets/Button.astro";
 
-for (const project of projects) {
+for (const project of PROJECTS) {
   try {
     const rawRepository = await fetch(
       `https://api.github.com/repos/${project.link.slice(19)}`,
@@ -35,7 +35,7 @@ for (const project of projects) {
   }
 }
 
-projects.sort((a, b) => a.name.localeCompare(b.name));
+PROJECTS.sort((a, b) => a.name.localeCompare(b.name));
 ---
 
 <Layout
@@ -43,7 +43,7 @@ projects.sort((a, b) => a.name.localeCompare(b.name));
     "@context": "https://schema.org/",
     "@type": "ItemList",
     name: "Projects",
-    itemListElement: projects.map((project, i) => ({
+    itemListElement: PROJECTS.map((project, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: project.name,
@@ -59,7 +59,7 @@ projects.sort((a, b) => a.name.localeCompare(b.name));
   <Container class="pb-4">
     <main class="flex flex-wrap justify-center gap-12">
       {
-        projects.map((project) => (
+        PROJECTS.map((project) => (
           <section class="flex min-h-max w-80 flex-col justify-between rounded-md border-[1px] border-neutral-800 bg-dark-50 p-6 md:w-96">
             <div class="flex">
               <h2 class="mb-4 break-words text-3xl font-bold text-white">

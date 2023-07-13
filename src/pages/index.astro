@@ -3,7 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import Navbar from "@components/widgets/Navbar.astro";
 import { Picture } from "@astrojs/image/components";
 import logo from "@assets/logo.png";
-import { socials } from "../config";
+import { SOCIALS } from "../config";
 ---
 
 <Layout
@@ -43,7 +43,7 @@ import { socials } from "../config";
 
       <ul class="my-5 flex justify-center text-white md:justify-start">
         {
-          socials.map((social) => (
+          SOCIALS.map((social) => (
             <li class="mr-4 ">
               <a class="h-10 w-10" href={social.link} title={social.name}>
                 <img

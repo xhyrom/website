@@ -1,11 +1,11 @@
-export const socials = [
+export const SOCIALS = [
   {
     name: "GitHub",
     link: "https://github.com/xHyroM/",
     icon: "github.svg",
   },
   {
-    name: "Discord.svg",
+    name: "Discord",
     link: "https://s.xhyrom.dev/discord",
     icon: "discord.svg",
   },
@@ -22,7 +22,7 @@ export const socials = [
   {
     name: "ko-fi",
     link: "https://ko-fi.com/xhyrom",
-    icon: "ko-fi.png",
+    icon: "ko-fi.svg",
   },
 ] satisfies {
   name: string;
@@ -30,7 +30,7 @@ export const socials = [
   icon: string;
 }[];
 
-export const skills = [
+export const SKILLS = [
   {
     name: "TypeScript",
     icon: "logos:typescript-icon",
@@ -138,7 +138,7 @@ export const skills = [
   color?: string;
 }[];
 
-export const projects = [
+export const PROJECTS = [
   {
     name: "HyLib",
     link: "https://github.com/xHyroM/HyLib",
@@ -214,7 +214,7 @@ export const projects = [
     link: "https://github.com/xHyroM/spawnergenz",
     desc: "Spawner Genz is a plugin that modifies the functionality of spawners so that they don't spawn entities, but instead store drops in a virtual storag in which you can then sell or move everything to your inventory.",
   },
-] as {
+] satisfies {
   name: string;
   link: string;
   desc: string;

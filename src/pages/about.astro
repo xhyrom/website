@@ -3,7 +3,7 @@ import Container from "@components/atoms/Container.astro";
 import Navbar from "@components/widgets/Navbar.astro";
 import TechIcon from "@components/widgets/TechIcon.astro";
 import Layout from "@layouts/Layout.astro";
-import { skills } from "~/config";
+import { SKILLS } from "~/config";
 ---
 
 <Layout
@@ -76,7 +76,7 @@ import { skills } from "~/config";
             class="mx-auto mb-4 flex w-fit flex-wrap items-center justify-center rounded-md border border-neutral-800"
           >
             {
-              skills.map((skill) => (
+              SKILLS.map((skill) => (
                 <TechIcon
                   icon={skill.icon}
                   color={skill.color}
