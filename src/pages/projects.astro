@@ -57,56 +57,67 @@ PROJECTS.sort((a, b) => a.name.localeCompare(b.name));
   </h1>
 
   <Container class="pb-4">
-    <main class="flex flex-wrap justify-center gap-12">
-      {
-        PROJECTS.map((project) => (
-          <section class="flex min-h-max w-80 flex-col justify-between rounded-md border-[1px] border-neutral-800 bg-dark-50 p-6 md:w-96">
-            <div class="flex">
-              <h2 class="mb-4 break-words text-3xl font-bold text-white">
-                {project.name}
-              </h2>
-              <div class="ml-4 flex h-fit translate-y-1 items-center justify-center gap-2 rounded-lg bg-neutral-800 px-4 py-1 text-neutral-300">
-                <div class="flex gap-1">
-                  <img
-                    src="/icons/star.svg"
-                    alt=""
-                    class="h-[21px] w-[21px] translate-y-[1px]"
-                  />
-                  <p>{project.stats!.stars}</p>
-                </div>
-                <div class="flex gap-1">
-                  {" "}
-                  <img
-                    src="/icons/code-fork-solid.svg"
-                    alt=""
-                    class="h-[21px] w-[21px] translate-y-[1px]"
-                  />
-                  <p>{project.stats!.forks}</p>
+    <main class="text-white">
+      <section class="flex flex-wrap justify-center gap-12 pb-4">
+        {
+          PROJECTS.map((project) => (
+            <section class="flex min-h-max w-80 flex-col justify-between rounded-md border-[1px] border-neutral-800 bg-dark-50 p-6 md:w-96">
+              <div class="flex">
+                <h2 class="mb-4 break-words text-3xl font-bold">
+                  {project.name}
+                </h2>
+                <div class="ml-4 flex h-fit translate-y-1 items-center justify-center gap-2 rounded-lg bg-neutral-800 px-4 py-1 text-neutral-300">
+                  <div class="flex gap-1">
+                    <img
+                      src="/icons/star.svg"
+                      alt=""
+                      class="h-[21px] w-[21px] translate-y-[1px]"
+                    />
+                    <p>{project.stats!.stars}</p>
+                  </div>
+                  <div class="flex gap-1">
+                    {" "}
+                    <img
+                      src="/icons/code-fork-solid.svg"
+                      alt=""
+                      class="h-[21px] w-[21px] translate-y-[1px]"
+                    />
+                    <p>{project.stats!.forks}</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <p class="mb-6 break-all text-neutral-300">{project.desc}</p>
-            <div>
-              <Button
-                label="GitHub"
-                link={project.link}
-                type="primary"
-                icon="/icons/arrow-up-right.svg"
-                iconClass="ml-2 mt-[1px] h-[23px] w-5"
-              />
-              <Button
-                label="Docs"
-                link={project.link}
-                type="secondary"
-                icon="/icons/book-open.svg"
-                iconClass="mr-2 h-6 w-5"
-                iconPosition="left"
-              />
-            </div>
-          </section>
-        ))
-      }
+              <p class="mb-6 break-all text-neutral-300">{project.desc}</p>
+              <div>
+                <Button
+                  label="GitHub"
+                  link={project.link}
+                  type="primary"
+                  icon="/icons/arrow-up-right.svg"
+                  iconClass="ml-2 mt-[1px] h-[23px] w-5"
+                />
+                <Button
+                  label="Docs"
+                  link={project.link}
+                  type="secondary"
+                  icon="/icons/book-open.svg"
+                  iconClass="mr-2 h-6 w-5"
+                  iconPosition="left"
+                />
+              </div>
+            </section>
+          ))
+        }
+      </section>
+
+      <section class="text-center text-xl">
+        <p>
+          You can also look at my repositories on <a
+            class="text-gold"
+            href="https://github.com/xHyroM">github</a
+          >. 👀
+        </p>
+      </section>
     </main>
   </Container>
 </Layout>
