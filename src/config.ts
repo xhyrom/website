@@ -177,6 +177,9 @@ export const PROJECTS = [
     name: "Peddler's Pocket",
     link: "https://github.com/xHyroM/peddlerspocket",
     desc: "A user-friendly plugin that makes the process of selling items easier and boosts your server's economy.",
+    button: {
+      link: "https://xhyrom.dev/docs/peddlerspocket",
+    },
   },
   {
     name: "Roles Bot",

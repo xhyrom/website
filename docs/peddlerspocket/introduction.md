@@ -15,6 +15,12 @@ This documentation aims to guide you through the installation, configuration, an
 
 > TL;DR: Peddler's Pocket is a plugin that allows players to sell items using a graphical interface. It's easy to use and highly customizable.
 
+## Installling
+
+1. Visit Modrinth by clicking [here](https://modrinth.com/plugin/peddlerspocket)
+2. Download specific version
+3. Move it to `plugins` folder
+
 ## Compatibility
 
 | Version | Supported |
