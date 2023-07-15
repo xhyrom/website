@@ -33,5 +33,18 @@ export const docs: Docs = {
         },
       ],
     },
+    {
+      text: "Peddler's Pocket",
+      items: [
+        {
+          text: "Introduction",
+          link: "/docs/peddlerspocket/introduction",
+        },
+        {
+          text: "Configuration",
+          link: "/docs/peddlerspocket/configuration",
+        },
+      ],
+    },
   ],
 };

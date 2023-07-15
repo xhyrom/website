@@ -13,11 +13,19 @@
   "redirects": [
     {
       "source": "/docs",
-      "destination": "/docs/discord-experiments-api/introduction"
+      "destination": "/docs/distools-api/introduction"
     },
     {
       "source": "/docs/",
-      "destination": "/docs/discord-experiments-api/introduction"
+      "destination": "/docs/distools-api/introduction"
+    },
+    {
+      "source": "/docs/distools-api",
+      "destination": "/docs/distools-api/introduction"
+    },
+    {
+      "source": "/docs/peddlerspocket",
+      "destination": "/docs/peddlerspocket/introduction"
     },
     {
       "source": "/docs/discord-experiments-api",
