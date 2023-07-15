@@ -153,6 +153,10 @@ export const PROJECTS = [
     name: "links",
     link: "https://github.com/xHyroM/links",
     desc: "Modern and simple link tree. Built on top of Astro and TailwindCSS. Using Cloudflare Pages.",
+    button: {
+      name: "Goto",
+      link: "https://links.xhyrom.dev",
+    },
   },
   {
     name: "lsx",
@@ -203,6 +207,10 @@ export const PROJECTS = [
   name: string;
   link: string;
   desc: string;
+  button?: {
+    name: string;
+    link: string;
+  };
   stats?: {
     forks: number;
     stars: number;
