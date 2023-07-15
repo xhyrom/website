@@ -150,6 +150,11 @@ export const PROJECTS = [
     desc: "My @discord client modification. Currently out of date but prepare for a new version soon.",
   },
   {
+    name: "links",
+    link: "https://github.com/xHyroM/links",
+    desc: "Modern and simple link tree. Built on top of Astro and TailwindCSS. Using Cloudflare Pages.",
+  },
+  {
     name: "lsx",
     link: "https://github.com/xHyroM/lsx",
     desc: "My attempt to create alternatives for **ls** and **dir**, mainly for windows. Using Rust.",
