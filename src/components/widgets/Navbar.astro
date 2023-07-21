@@ -30,12 +30,12 @@ const navItems = [
     <a class="text-2xl font-extrabold" href="/">xHyroM</a>
     <nav>
       <ul
-        class="nav-links absolute left-0 top-0 z-20 hidden w-full gap-10 border-b-[1px] border-neutral-800 bg-dark-50 transition-all md:relative md:flex md:flex-row md:border-b-0 md:bg-transparent [&_li]:my-2 [&_li]:ml-4"
+        class="nav-links absolute left-0 top-0 z-20 hidden w-full gap-10 border-b-[1px] border-neutral-800 bg-dark-800 transition-all md:relative md:flex md:flex-row md:border-b-0 md:bg-transparent [&_li]:my-2 [&_li]:ml-4"
       >
         {
           navItems.map((item) => (
             <li class=" transition-all hover:-translate-y-[2px]">
-              <a href={item.link} class="text-neutral-300 hover:text-gold">
+              <a href={item.link} class="text-neutral-300 hover:text-gold-500">
                 {item.name}
               </a>
             </li>

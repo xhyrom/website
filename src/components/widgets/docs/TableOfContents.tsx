@@ -90,7 +90,7 @@ const TableOfContents: FunctionalComponent<{ headings: MarkdownHeading[] }> = ({
   };
 
   return (
-    <ul ref={toc} className={"border-l border-dark-300"}>
+    <ul ref={toc} className={"border-l border-dark-500"}>
       <li id={onThisPageId} className="mt-4 pl-4 font-semibold text-white">
         On this page
       </li>
@@ -99,8 +99,8 @@ const TableOfContents: FunctionalComponent<{ headings: MarkdownHeading[] }> = ({
           <li
             className={`border-l py-1 ${
               currentId === slug
-                ? "border-gold text-gold"
-                : "border-transparent text-gray-100 hover:text-gray-200"
+                ? "border-gold-500 text-gold-500"
+                : "border-transparent text-gray-500 hover:text-gray-400"
             }`}
           >
             <a

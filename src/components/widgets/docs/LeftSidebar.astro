@@ -16,10 +16,10 @@ const getLinkClasses = (link: SidebarItem) => {
   const baseClasses = "py-1 px-6 my-1 transition-colors border-l -ml-px pl-4";
 
   if (isCurrentPage(link)) {
-    return baseClasses + " border-gold text-gold";
+    return baseClasses + " border-gold-500 text-gold-500";
   } else {
     return (
-      baseClasses + " border-transparent text-gray-100 hover:text-gray-200"
+      baseClasses + " border-transparent text-gray-500 hover:text-gray-400"
     );
   }
 };
@@ -47,7 +47,7 @@ const getLinkClasses = (link: SidebarItem) => {
         docs.sidebar.map(({ text, items }) => (
           <>
             <li class="mt-4 font-semibold text-white">{text}</li>
-            <ul class="border-l border-dark-300">
+            <ul class="border-l border-dark-500">
               {items.map((item) => (
                 <li class={getLinkClasses(item)}>
                   <a href={item.link}>{item.text}</a>

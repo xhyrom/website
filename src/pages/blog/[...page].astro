@@ -52,7 +52,7 @@ const posts = page.data as {
           return (
             <>
               <a
-                class="mb-4 break-all text-2xl font-semibold text-gold text-opacity-80"
+                class="mb-4 break-all text-2xl font-semibold text-gold-500 text-opacity-80"
                 href={post.url}
               >
                 {post.frontmatter.title}
@@ -67,7 +67,7 @@ const posts = page.data as {
               <p class="text-1xl break-all text-white">
                 {post.frontmatter.description}
               </p>
-              <hr class="mb-4 mt-4 text-dark-200" />
+              <hr class="mb-4 mt-4 text-dark-600" />
             </>
           );
         })

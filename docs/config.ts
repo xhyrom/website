@@ -1,13 +1,15 @@
 export interface Docs {
-  sidebar: SidebarItem[];
+  sidebar: Sidebar[];
 }
 
 export interface SidebarItem {
   text: string;
-  items: {
-    text: string;
-    link: string;
-  }[];
+  link: string;
+}
+
+export interface Sidebar {
+  text: string;
+  items: SidebarItem[];
 }
 
 export const docs: Docs = {
