@@ -63,27 +63,29 @@ PROJECTS.sort((a, b) => a.name.localeCompare(b.name));
         {
           PROJECTS.map((project) => (
             <section class="flex min-h-max w-80 flex-col justify-between rounded-md border-[1px] border-neutral-800 bg-dark-800 p-6 md:w-96">
-              <div class="flex">
+              <div class="flex flex-col">
                 <h2 class="mb-4 break-words text-3xl font-bold">
                   {project.name}
                 </h2>
-                <div class="ml-4 flex h-fit translate-y-1 items-center justify-center gap-2 rounded-lg bg-neutral-800 px-4 py-1 text-neutral-300">
-                  <div class="flex gap-1">
-                    <img
-                      src="/icons/star.svg"
-                      alt=""
-                      class="h-[21px] w-[21px] translate-y-[1px]"
-                    />
-                    <p>{project.stats!.stars}</p>
-                  </div>
-                  <div class="flex gap-1">
-                    {" "}
-                    <img
-                      src="/icons/code-fork-solid.svg"
-                      alt=""
-                      class="h-[21px] w-[21px] translate-y-[1px]"
-                    />
-                    <p>{project.stats!.forks}</p>
+                <div class="flex">
+                  <div class="ml-4 flex h-fit translate-y-1 items-center justify-center gap-2 rounded-lg bg-neutral-800 px-4 py-1 text-neutral-300">
+                    <div class="flex gap-1">
+                      <img
+                        src="/icons/star.svg"
+                        alt=""
+                        class="h-[21px] w-[21px] translate-y-[1px]"
+                      />
+                      <p>{project.stats!.stars}</p>
+                    </div>
+                    <div class="flex gap-1">
+                      {" "}
+                      <img
+                        src="/icons/code-fork-solid.svg"
+                        alt=""
+                        class="h-[21px] w-[21px] translate-y-[1px]"
+                      />
+                      <p>{project.stats!.forks}</p>
+                    </div>
                   </div>
                 </div>
               </div>
