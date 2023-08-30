@@ -13,7 +13,7 @@ for (const project of PROJECTS) {
         headers: {
           Authorization: `Bearer ${import.meta.env.GITHUB_ACCESS_TOKEN}`,
         },
-      }
+      },
     ).catch(console.log);
     if (!rawRepository) {
       project.stats = {
@@ -63,7 +63,7 @@ PROJECTS.sort((a, b) => a.name.localeCompare(b.name));
         {
           PROJECTS.map((project) => (
             <section class="flex min-h-max w-80 flex-col justify-between rounded-md border-[1px] border-neutral-800 bg-dark-800 p-6 md:w-96">
-              <div class="flex flex-col">
+              <div class="flex justify-between">
                 <h2 class="mb-4 break-words text-3xl font-bold">
                   {project.name}
                 </h2>
