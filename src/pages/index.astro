@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Navbar from "@components/widgets/Navbar.astro";
-import { Picture } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import logo from "@assets/logo.png";
 import { SOCIALS } from "../config";
 ---
@@ -31,13 +31,10 @@ import { SOCIALS } from "../config";
     class="mt-24 flex flex-col items-center justify-center md:mt-64 md:flex-row"
   >
     <div class="justify-cener flex items-center">
-      <Picture
+      <Image
         src={logo}
-        formats={["png"]}
-        sizes="(max-width: 200px) 100vw, 200px"
-        widths={[200, 400]}
-        aspectRatio={"1:1"}
-        alt="descriptive text"
+        width={200}
+        alt="pfp"
         class={"h-[200px] w-[200px]"}
       />
     </div>
