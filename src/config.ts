@@ -113,7 +113,7 @@ export const SKILLS = [
   },
   {
     name: "Cloudflare",
-    icon: "logos:cloudflare",
+    icon: "logos:cloudflare-icon",
   },
   {
     name: "Cloudflare Pages",
