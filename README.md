@@ -4,7 +4,7 @@
   <br>
 </h1>
 
-<h4 align="center">Source code for hyro's website, simple and modern page.</h4>
+<h4 align="center">Source code for my website, simple and modern page.</h4>
 
 <p align="center">
     <a href="https://s.xhyrom.dev/discord" alt="Discord">
@@ -20,9 +20,9 @@
 
 ## Usage
 
-- To run the development server: `npm run dev`
-- To build the project for production: `npm run build`
-- To preview the production build: `npm run preview`
+- To run the development server: `pnpm run dev`
+- To build the project for production: `pnpm run build`
+- To preview the production build: `pnpm run preview`
 
 ## Contributing
 
