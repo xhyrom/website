@@ -4,7 +4,7 @@ import SEOEmbed from "@components/widgets/SEOEmbed.astro";
 const { title, description, keywords, schemaOrg } = {
   title: "xHyroM",
   description: "I'm Hyro :) o/",
-  keywords: "xhyrom developer dev hyro hyrousek",
+  keywords: "xhyrom developer dev hyro hyrousek hyriik",
   ...Astro.props,
 };
 ---
@@ -39,11 +39,12 @@ const { title, description, keywords, schemaOrg } = {
       )
     }
   </head>
-  <body class="overflow-x-hidden bg-dark-900 font-sans">
+  <body class="overflow-x-hidden snow-container bg-dark-900 font-sans">
     <slot />
 
     <script>
       import "@scripts/menu.ts";
+      import "@scripts/snow.js"
     </script>
     <style is:global>
       ::-webkit-scrollbar {
