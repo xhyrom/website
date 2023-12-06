@@ -1,5 +1,6 @@
 ---
 import SEOEmbed from "@components/widgets/SEOEmbed.astro";
+import Snow from "../components/widgets/decorations/Snow.astro";
 
 const { title, description, keywords, schemaOrg } = {
   title: "xHyroM",
@@ -9,7 +10,7 @@ const { title, description, keywords, schemaOrg } = {
 };
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -39,12 +40,12 @@ const { title, description, keywords, schemaOrg } = {
       )
     }
   </head>
-  <body class="overflow-x-hidden snow-container bg-dark-900 font-sans">
+  <body class="overflow-x-hidden bg-dark-900 font-sans">
     <slot />
+    <Snow />
 
     <script>
       import "@scripts/menu.ts";
-      import "@scripts/snow.js"
     </script>
     <style is:global>
       ::-webkit-scrollbar {

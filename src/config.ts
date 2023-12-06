@@ -68,6 +68,10 @@ export const SKILLS = [
     icon: "logos:tailwindcss-icon",
   },
   {
+    name: "Python",
+    icon: "logos:python",
+  },
+  {
     name: "Java",
     icon: "logos:java",
   },
