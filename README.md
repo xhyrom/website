@@ -20,9 +20,9 @@
 
 ## Usage
 
-- To run the development server: `pnpm run dev`
-- To build the project for production: `pnpm run build`
-- To preview the production build: `pnpm run preview`
+- To run the development server: `npm run dev`
+- To build the project for production: `npm run build`
+- To preview the production build: `npm run preview`
 
 ## Contributing
 
