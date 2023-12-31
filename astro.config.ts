@@ -12,7 +12,6 @@ import compress from "astro-compress";
 import preact from "@astrojs/preact";
 
 // https://astro.build/config
-import prefetch from "@astrojs/prefetch";
 import robotsTxt from "astro-robots-txt";
 import minify from "./astro-integrations/minify";
 
@@ -32,7 +31,6 @@ export default defineConfig({
       svg: false,
       html: false,
     }),
-    prefetch(),
     robotsTxt({
       policy: [
         {

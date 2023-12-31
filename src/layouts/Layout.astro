@@ -1,6 +1,7 @@
 ---
 import SEOEmbed from "@components/widgets/SEOEmbed.astro";
 import Snow from "../components/widgets/decorations/Snow.astro";
+import Fireworks from "../components/widgets/decorations/Fireworks.astro";
 
 const { title, description, keywords, schemaOrg } = {
   title: "xHyroM",
@@ -43,6 +44,7 @@ const { title, description, keywords, schemaOrg } = {
   <body class="overflow-x-hidden bg-dark-900 font-sans">
     <slot />
     <Snow />
+    <Fireworks />
 
     <script>
       import "@scripts/menu.ts";
