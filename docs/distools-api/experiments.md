@@ -155,6 +155,11 @@ If the guild experiment hash (murmurhash v3 unsigned of `experiment_name:guild_i
 
 You can fetch experiments from the API by sending a GET request to [https://api.distools.xhyrom.dev/v2/experiments](https://api.distools.xhyrom.dev/v2/experiments).
 
+<div style="background-color: #e8c192; border-color: #fc8c03; color: #9c611a; padding-top: 0.7rem; padding-bottom: 0.7rem; padding-left: 0.7rem; padding-right: 0.8rem; border-left-width: 4px" role="alert">
+  <span style="font-weight: 700;">Be Warned</span><br />
+  <span>Unfortunately, due to capacity issues, the query parameters in the URL do not work. All experiments are always returned.</span>
+</div>
+
 **Query parameters:**
 | Name                  | Type            | Description                                                   |
 | --------------------- | --------------- | ------------------------------------------------------------- |
@@ -172,6 +177,11 @@ GET https://api.distools.xhyrom.dev/v2/experiments
 Returns array of [Experiment Object](#experiment-object)
 
 ## Fetching experiment
+
+<div style="background-color: #e8c192; border-color: #fc8c03; color: #9c611a; padding-top: 0.7rem; padding-bottom: 0.7rem; padding-left: 0.7rem; padding-right: 0.8rem; border-left-width: 4px" role="alert">
+  <span style="font-weight: 700;">Be Warned</span><br />
+  <span>Unfortunately, this endpoint is not currently available  due to capacity issues. As workaround, you can fetch all the experiments and filter yourself.</span>
+</div>
 
 You can fetch a specific experiment from the API by sending a GET request to [https://api.distools.xhyrom.dev/v2/experiments/:experimentId](https://api.distools.xhyrom.dev/v2/experiments/:experimentId).
 

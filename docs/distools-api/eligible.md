@@ -5,6 +5,11 @@ description: How to check if a guild is eligible for an experiment
 
 # Eligible
 
+<div style="background-color: #e8c192; border-color: #fc8c03; color: #9c611a; padding-top: 0.7rem; padding-bottom: 0.7rem; padding-left: 0.7rem; padding-right: 0.8rem; border-left-width: 4px" role="alert">
+  <span style="font-weight: 700;">Be Warned</span><br />
+  <span>Unfortunately, this endpoint is not currently available  due to capacity issues.</span>
+</div>
+
 This section of the documentation will cover how to check if a guild is eligible for an experiment.
 
 Accessible on [https://api.distools.xhyrom.dev/v2/eligible](https://api.distools.xhyrom.dev/v2/eligible)
