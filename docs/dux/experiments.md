@@ -1,13 +1,13 @@
 ---
 title: Experiments
-description: How to fetch experiments from the API
+description: How to fetch experiments
 ---
 
 # Experiments
 
-This section of the documentation will cover how to fetch experiments from the API.
+This section of the documentation will cover how to fetch experiments.
 
-Accessible on [https://api.distools.xhyrom.dev/v2/experiments](https://api.distools.xhyrom.dev/v2/experiments)
+Accessible on [https://dux.xhyrom.dev/v2/experiments](https://dux.xhyrom.dev/v2/experiments)
 
 ## Experiment Object
 
@@ -153,7 +153,7 @@ If the guild experiment hash (murmurhash v3 unsigned of `experiment_name:guild_i
 
 ## Fetching all experiments
 
-You can fetch experiments from the API by sending a GET request to [https://api.distools.xhyrom.dev/v2/experiments](https://api.distools.xhyrom.dev/v2/experiments).
+You can fetch experiments from the API by sending a GET request to [https://dux.xhyrom.dev/v2/experiments](https://dux.xhyrom.dev/v2/experiments).
 
 <div style="background-color: #e8c192; border-color: #fc8c03; color: #9c611a; padding-top: 0.7rem; padding-bottom: 0.7rem; padding-left: 0.7rem; padding-right: 0.8rem; border-left-width: 4px" role="alert">
   <span style="font-weight: 700;">Be Warned</span><br />
@@ -171,24 +171,19 @@ You can fetch experiments from the API by sending a GET request to [https://api.
 \* If you want multiple kinds, you can separate them with a comma (,)
 
 ```
-GET https://api.distools.xhyrom.dev/v2/experiments
+GET https://dux.xhyrom.dev/v2/experiments
 ```
 
 Returns array of [Experiment Object](#experiment-object)
 
 ## Fetching experiment
 
-<div style="background-color: #e8c192; border-color: #fc8c03; color: #9c611a; padding-top: 0.7rem; padding-bottom: 0.7rem; padding-left: 0.7rem; padding-right: 0.8rem; border-left-width: 4px" role="alert">
-  <span style="font-weight: 700;">Be Warned</span><br />
-  <span>Unfortunately, this endpoint is not currently available  due to capacity issues. As workaround, you can fetch all the experiments and filter yourself.</span>
-</div>
-
-You can fetch a specific experiment from the API by sending a GET request to [https://api.distools.xhyrom.dev/v2/experiments/:experimentId](https://api.distools.xhyrom.dev/v2/experiments/:experimentId).
+You can fetch a specific experiment from the API by sending a GET request to [https://dux.xhyrom.dev/v2/experiments/:experimentId](https://dux.xhyrom.dev/v2/experiments/:experimentId).
 
 You can use same query parameters as in [Fetching all experiments](#fetching-all-experiments)
 
 ```
-GET https://api.distools.xhyrom.dev/v2/experiments/:experimentId
+GET https://dux.xhyrom.dev/v2/experiments/:experimentId
 ```
 
 Returns [Experiment Object](#experiment-object)

@@ -13,27 +13,23 @@
   "redirects": [
     {
       "source": "/docs",
-      "destination": "/docs/distools-api/introduction"
+      "destination": "/docs/dux/introduction"
     },
     {
       "source": "/docs/",
-      "destination": "/docs/distools-api/introduction"
-    },
-    {
-      "source": "/docs/distools-api",
-      "destination": "/docs/distools-api/introduction"
+      "destination": "/docs/dux/introduction"
     },
     {
       "source": "/docs/peddlerspocket",
       "destination": "/docs/peddlerspocket/introduction"
     },
     {
-      "source": "/docs/discord-experiments-api",
-      "destination": "/docs/distools-api/introduction"
+      "source": "/docs/distools-api",
+      "destination": "/docs/dux/introduction"
     },
     {
-      "source": "/docs/discord-experiments-api/:name",
-      "destination": "/docs/distools-api/:name"
+      "source": "/docs/distools-api/:name",
+      "destination": "/docs/dux/:name"
     },
     {
       "source": "/blog/:name",

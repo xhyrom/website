@@ -15,23 +15,27 @@ export interface Sidebar {
 export const docs: Docs = {
   sidebar: [
     {
-      text: "Discord Tools API",
+      text: "DUX API",
       items: [
         {
           text: "Introduction",
-          link: "/docs/distools-api/introduction",
+          link: "/docs/dux/introduction",
         },
         {
           text: "Experiments",
-          link: "/docs/distools-api/experiments",
+          link: "/docs/dux/experiments",
         },
         {
           text: "Eligible",
-          link: "/docs/distools-api/eligible",
+          link: "/docs/dux/eligible",
+        },
+        {
+          text: "Endpoints",
+          link: "/docs/dux/endpoints",
         },
         {
           text: "Stats",
-          link: "/docs/distools-api/stats",
+          link: "/docs/dux/stats",
         },
       ],
     },
