@@ -20,6 +20,10 @@
       "destination": "/docs/dux/introduction"
     },
     {
+      "source": "/docs/dux",
+      "destination": "/docs/dux/introduction"
+    },
+    {
       "source": "/docs/peddlerspocket",
       "destination": "/docs/peddlerspocket/introduction"
     },
