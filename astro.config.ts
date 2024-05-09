@@ -6,7 +6,7 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
-import compress from "astro-compress";
+import compress from "@playform/compress";
 
 // https://astro.build/config
 import preact from "@astrojs/preact";
