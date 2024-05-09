@@ -24,6 +24,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   site: "https://xhyrom.dev/",
+  prefetch: true,
   integrations: [
     tailwind(),
     sitemap(),

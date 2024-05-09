@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@astrojs/preact": "^3.3.0",
-    "@astrojs/prefetch": "^0.4.1",
     "@astrojs/sitemap": "^3.1.4",
     "@astrojs/tailwind": "^5.1.0",
     "@playform/compress": "^0.0.4",
