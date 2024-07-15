@@ -146,7 +146,7 @@ export const PROJECTS = [
   {
     name: "Discord Datamining",
     link: "https://github.com/xHyroM/discord-datamining",
-    desc: "Uncover Insights and Trends in Discord's Ecosystem. Explore, Analyze, Discover.",
+    desc: "Repository offering datamining and analyzing web builds, host builds, articles, blog posts and discord's github",
   },
   {
     name: "hykord",
