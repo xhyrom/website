@@ -154,6 +154,11 @@ export const PROJECTS = [
     desc: "Repository offering datamining and analyzing web builds, host builds, articles, blog posts and discord's github",
   },
   {
+    name: "gimi",
+    link: "https://github.com/xHyroM/gimi",
+    desc: "tool for managing multiple git remotes as mirrors written in c",
+  },
+  {
     name: "hykord",
     link: "https://github.com/xHyroM/hykord",
     desc: "My @discord client modification. Currently out of date but prepare for a new version soon.",
@@ -209,11 +214,6 @@ export const PROJECTS = [
     name: "shortener",
     link: "https://github.com/xHyroM/shortener",
     desc: "Modern shortener using Astro, Svelte, TypeScript built on top of Cloudflare Pages, Page Functions, D1 and KV",
-  },
-  {
-    name: "Slovensko v Grafoch",
-    link: "https://github.com/xHyroM/slovensko-v-grafoch",
-    desc: "Slovensko v Grafoch is a website that shows data about Slovakia in graphs.",
   },
 ] as {
   name: string;
