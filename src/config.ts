@@ -24,6 +24,11 @@ export const SOCIALS = [
     link: "https://ko-fi.com/xhyrom",
     icon: "ko-fi.svg",
   },
+  {
+    name: "email",
+    link: "mailto:contact@xhyrom.dev",
+    icon: "mail.svg",
+  },
 ] satisfies {
   name: string;
   link: string;
