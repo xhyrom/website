@@ -16,13 +16,13 @@
 
 1. Clone this repository: `git clone https://github.com/xHyroM/website.git`
 2. Navigate to the project directory: `cd website`
-3. Install the dependencies: `npm install`
+3. Install the dependencies: `bun install`
 
 ## Usage
 
-- To run the development server: `npm run dev`
-- To build the project for production: `npm run build`
-- To preview the production build: `npm run preview`
+- To run the development server: `bun run dev`
+- To build the project for production: `bun run build`
+- To preview the production build: `bun run preview`
 
 ## Contributing
 
