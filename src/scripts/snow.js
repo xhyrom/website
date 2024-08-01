@@ -253,7 +253,7 @@ class SnowStorm {
             window.scrollY ||
               document.documentElement.scrollTop ||
               (noFixed ? document.body.scrollTop : 0),
-            10
+            10,
           );
       if (isNaN(scrollY)) {
         scrollY = 0; // Netscape 6 scroll fix
@@ -589,7 +589,7 @@ class SnowStorm {
       var i;
       for (i = 0; i < limit; i++) {
         storm.flakes[storm.flakes.length] = new storm.SnowFlake(
-          parseInt(rnd(flakeTypes), 10)
+          parseInt(rnd(flakeTypes), 10),
         );
         if (allowInactive || i > storm.flakesMaxActive) {
           storm.flakes[storm.flakes.length - 1].active = -1;
@@ -627,7 +627,7 @@ class SnowStorm {
         storm.events.add(
           isIE ? document : window,
           "mousemove",
-          storm.mouseMove
+          storm.mouseMove,
         );
       }
       storm.animationInterval = Math.max(20, storm.animationInterval);
@@ -646,7 +646,7 @@ class SnowStorm {
         storm.targetElement = document.getElementById(targetID);
         if (!storm.targetElement) {
           throw new Error(
-            'Snowstorm: Unable to get targetElement "' + targetID + '"'
+            'Snowstorm: Unable to get targetElement "' + targetID + '"',
           );
         }
       }
@@ -692,7 +692,7 @@ class SnowStorm {
       storm.events.remove(
         isIE ? document : window,
         "mousemove",
-        doDelayedStart
+        doDelayedStart,
       );
     }
 
