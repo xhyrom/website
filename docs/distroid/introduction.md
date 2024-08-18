@@ -18,3 +18,17 @@ Distroid is an API that allows you to track and download the latest releases of 
 - alpha (Canary)
 
 > Did you know that distroid stands for **Discord Android Tracker**?
+
+## Requests
+
+Base URL
+
+```
+https://distroid.xhyrom.dev/v{api_version_number}
+```
+
+### Versions
+
+| Version | Status    |
+| ------- | --------- |
+| v1      | Available |

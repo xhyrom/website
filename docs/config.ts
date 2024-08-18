@@ -68,6 +68,10 @@ export const docs: Docs = {
           text: "Current",
           link: "/docs/distroid/current",
         },
+        {
+          text: "Download",
+          link: "/docs/distroid/download",
+        },
       ],
     },
     {

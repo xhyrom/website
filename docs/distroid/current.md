@@ -9,13 +9,11 @@ This section explains how to retrieve the latest release of the Discord Android 
 
 **Endpoint:** [https://distroid.xhyrom.dev/v1/current](https://distroid.xhyrom.dev/v1/current)
 
-### Channel Type
-
-### Channel Object
+## Channel Object
 
 This object describes the current release channel for the Discord Android app.
 
-**Properties:**
+**Channel Structure:**
 
 | Field Name     | Type                                 | Description                                                              |
 | -------------- | ------------------------------------ | ------------------------------------------------------------------------ |
@@ -25,11 +23,19 @@ This object describes the current release channel for the Discord Android app.
 
 \* Only included if you're using `with_file_metadata=true` query parameter.
 
-### File Object
+#### Channel Type
+
+|        |
+| ------ |
+| stable |
+| beta   |
+| alpha  |
+
+## File Object
 
 This object details a specific APK split for the Discord Android app.
 
-**Properties:**
+**File Structure:**
 
 | Field Name      | Type    | Description                                              |
 | --------------- | ------- | -------------------------------------------------------- |
@@ -41,14 +47,31 @@ This object details a specific APK split for the Discord Android app.
 
 To retrieve the latest release details, send a GET request to the API endpoint:
 
-**Optional Query Parameter:**
+**Query parameters:**
 
 | Parameter Name     | Type    | Description                                                  |
 | ------------------ | ------- | ------------------------------------------------------------ |
 | with_file_metadata | boolean | Include detailed information about each available APK split. |
 
-```
-GET https://distroid.xhyrom.dev/v1/current
+### GET /current
+
+**Example Map**
+
+```json
+{
+  "alpha": {
+    "version_code": 244205,
+    "version_string": "244.5"
+  },
+  "beta": {
+    "version_code": 243115,
+    "version_string": "243.15"
+  },
+  "stable": {
+    "version_code": 242020,
+    "version_string": "242.20"
+  }
+}
 ```
 
-Returns map\[channel type - `stable`, `beta` or `alpha`\]\[[Channel Object](#channel-object)\]
+Returns map\[[Channel Type](#channel-type)\]\[[Channel Object](#channel-object)\]
