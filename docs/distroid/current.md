@@ -1,11 +1,11 @@
 ---
 title: Current
-description: How to get latest version of the discord's android app
+description: How to get latest release of the discord's android app
 ---
 
-## Get The Latest Android Version
+## Get The Latest Android Release
 
-This section explains how to retrieve the latest version of the Discord Android app using our API.
+This section explains how to retrieve the latest release of the Discord Android app using our API.
 
 **Endpoint:** [https://distroid.xhyrom.dev/v1/current](https://distroid.xhyrom.dev/v1/current)
 
@@ -20,7 +20,7 @@ This object describes the current release channel for the Discord Android app.
 | Field Name     | Type                                 | Description                                                              |
 | -------------- | ------------------------------------ | ------------------------------------------------------------------------ |
 | version_code   | integer                              | Internal version code used for downloading specific APKs. (e.g., 244205) |
-| version_string | string                               | Human-readable version number of the release. (e.g., "244.5")            |
+| version_string | string                               | Version name of the release. (e.g., "244.5")            |
 | files \*       | array of [file object](#file-object) | An array containing details about the available APK splits.              |
 
 \* Only included if you're using `with_file_metadata=true` query parameter.
@@ -33,13 +33,13 @@ This object details a specific APK split for the Discord Android app.
 
 | Field Name      | Type    | Description                                              |
 | --------------- | ------- | -------------------------------------------------------- |
-| compressed_size | integer | Size of the downloaded file in bytes (compressed).       |
-| size            | integer | Size of the installed APK in bytes (uncompressed).       |
+| compressed_size | integer | Bytesize of the `.apk` file (compressed).       |
+| size            | integer | Bytesize of the installed APK (uncompressed).       |
 | split_id        | string  | Unique identifier for the split. Empty for the base APK. |
 
-### Fetching Latest Version Information
+### Fetching Latest Release Information
 
-To retrieve the latest version details, send a GET request to the API endpoint:
+To retrieve the latest release details, send a GET request to the API endpoint:
 
 **Optional Query Parameter:**
 
