@@ -58,6 +58,23 @@ export const docs: Docs = {
       ],
     },
     {
+      text: "Distroid",
+      items: [
+        {
+          text: "Introduction",
+          link: "/docs/distroid/introduction",
+        },
+        {
+          text: "Current",
+          link: "/docs/distroid/current",
+        },
+        {
+          text: "Download",
+          link: "/docs/distroid/download",
+        },
+      ],
+    },
+    {
       text: "Peddler's Pocket",
       items: [
         {

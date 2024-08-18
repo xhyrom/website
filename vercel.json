@@ -24,6 +24,10 @@
       "destination": "/docs/dux/introduction"
     },
     {
+      "source": "/docs/distroid",
+      "destination": "/docs/distroid/introduction"
+    },
+    {
       "source": "/docs/peddlerspocket",
       "destination": "/docs/peddlerspocket/introduction"
     },
