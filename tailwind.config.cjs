@@ -34,6 +34,15 @@ module.exports = {
         yellow: ["0 45px 35px rgba(250, 193, 25, 0.5)"],
         yellowalt: ["0 4px 12px rgba(250, 193, 25, 0.8)"],
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            th: {
+              textAlign: "left",
+            },
+          },
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
