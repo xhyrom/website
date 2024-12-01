@@ -15,7 +15,8 @@ class SnowStorm {
   constructor() {
     // --- common properties ---
 
-    this.autoStart = true; // Whether the snow should start automatically or not.
+    var currentDate = new Date();
+    this.autoStart = currentDate.getMonth() < 3 || currentDate.getMonth() == 11; // Whether the snow should start automatically or not.
     this.excludeMobile = true; // Snow is likely to be bad news for mobile phones' CPUs (and batteries.) Enable at your own risk.
     this.flakesMax = 128; // Limit total amount of snow made (falling + sticking)
     this.flakesMaxActive = 64; // Limit amount of snow falling at once (less = lower CPU use)
