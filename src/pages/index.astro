@@ -21,7 +21,7 @@ import Layout from "@layouts/Layout.astro";
 import Navbar from "@components/widgets/Navbar.astro";
 import { Image } from "astro:assets";
 import logo from "@assets/logo.png";
-import { SOCIALS } from "../config";
+import { AGE, SOCIALS } from "../config";
 ---
 
 <Layout
@@ -55,7 +55,7 @@ import { SOCIALS } from "../config";
       <div class="flex flex-col drop-shadow-yellow">
         <h1 class="text-6xl font-extrabold text-white">xHyroM</h1>
         <p class="mt-2 text-xl text-gray-400">
-          15-year-old computer enthusiast & student
+          {AGE}-year-old computer enthusiast & student
         </p>
       </div>
 

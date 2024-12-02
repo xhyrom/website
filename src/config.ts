@@ -16,6 +16,8 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
+export const AGE = 16;
+
 export const SOCIALS = [
   {
     name: "GitHub",
