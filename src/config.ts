@@ -169,14 +169,29 @@ export const SKILLS = [
 
 export const PROJECTS = [
   {
-    name: "Discord Datamining",
-    link: "https://github.com/xHyroM/discord-datamining",
-    desc: "Repository offering datamining and analyzing web builds, host builds, articles, blog posts and discord's github",
+    name: "setup-bun",
+    link: "https://github.com/oven-sh/setup-bun",
+    desc: "Set up your GitHub Actions workflow with a specific version of Bun.",
   },
   {
     name: "gimi",
     link: "https://github.com/xHyroM/gimi",
     desc: "tool for managing multiple git remotes as mirrors written in c",
+  },
+  {
+    name: "Roles Bot",
+    link: "https://github.com/xHyroM/roles-bot",
+    desc: "Simplify role assignment with interactive buttons and dropdowns in Discord. Using Cloudflare Workers.",
+  },
+  {
+    name: "Blom",
+    link: "https://github.com/xhyrom/blom",
+    desc: "A programming language built in Go, offering compilation with QBE, direct interpretation, and transpilation to multiple languages",
+  },
+  {
+    name: "Discord Datamining",
+    link: "https://github.com/xHyroM/discord-datamining",
+    desc: "Repository offering datamining and analyzing web builds, host builds, articles, blog posts and discord's github",
   },
   {
     name: "hykord",
@@ -193,9 +208,9 @@ export const PROJECTS = [
     },
   },
   {
-    name: "lsx",
-    link: "https://github.com/xHyroM/lsx",
-    desc: "My attempt to create alternatives for **ls** and **dir**, mainly for windows. Using Rust.",
+    name: "dakra",
+    link: "https://github.com/xhyrom/dakra",
+    desc: "A voice assistant built as a school project to make tasks easier.",
   },
   {
     name: "Mashe",
@@ -216,19 +231,14 @@ export const PROJECTS = [
     },
   },
   {
-    name: "Roles Bot",
-    link: "https://github.com/xHyroM/roles-bot",
-    desc: "Simplify role assignment with interactive buttons and dropdowns in Discord. Using Cloudflare Workers.",
+    name: "Time Control",
+    link: "https://github.com/xhyrom/timecontrol",
+    desc: "A modern mod that allows you to speed up, slow down and stop time using 3 items.",
   },
   {
     name: "Roomblom",
     link: "https://github.com/xHyroM/roomblom",
     desc: "Roomblom is a simple discord bot for music. Built on top of LavaPlayer, JDA and Kotlin.",
-  },
-  {
-    name: "setup-bun",
-    link: "https://github.com/oven-sh/setup-bun",
-    desc: "Set up your GitHub Actions workflow with a specific version of Bun.",
   },
   {
     name: "shortener",

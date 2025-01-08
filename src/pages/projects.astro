@@ -25,14 +25,19 @@ import Button from "~/components/widgets/Button.astro";
 
 for (const project of PROJECTS) {
   try {
+    const headers: {} = import.meta.env.GITHUB_ACCESS_TOKEN
+      ? {
+          Authorization: `Bearer ${import.meta.env.GITHUB_ACCESS_TOKEN}`,
+        }
+      : {};
+
     const rawRepository = await fetch(
       `https://api.github.com/repos/${project.link.slice(19)}`,
       {
-        headers: {
-          Authorization: `Bearer ${import.meta.env.GITHUB_ACCESS_TOKEN}`,
-        },
+        headers,
       },
     ).catch(console.log);
+
     if (!rawRepository) {
       project.stats = {
         forks: 0,
@@ -53,7 +58,7 @@ for (const project of PROJECTS) {
   }
 }
 
-PROJECTS.sort((a, b) => a.name.localeCompare(b.name));
+PROJECTS.sort((a, b) => b.stats!.stars - a.stats!.stars);
 ---
 
 <Layout
