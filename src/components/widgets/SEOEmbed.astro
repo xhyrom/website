@@ -17,7 +17,7 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-const { url, title, description, image } = {
+let { url, title, description, image } = {
   // default values
   url: "https://xhyrom.dev/",
   title: "xhyrom",
@@ -25,6 +25,10 @@ const { url, title, description, image } = {
   image: null,
   ...Astro.props,
 };
+
+if (!title.startsWith("xhyrom")) {
+  title = `xhyrom - ${title.trim()}`;
+}
 ---
 
 <!-- Open Graph / Facebook -->
