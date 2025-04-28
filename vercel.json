@@ -28,6 +28,10 @@
       "destination": "/docs/distroid/introduction"
     },
     {
+      "source": "/docs/sniff",
+      "destination": "/docs/sniff/introduction"
+    },
+    {
       "source": "/docs/peddlerspocket",
       "destination": "/docs/peddlerspocket/introduction"
     },

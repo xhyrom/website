@@ -16,6 +16,8 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
+import { BadgeType } from "./badges";
+
 export interface Docs {
   sidebar: Sidebar[];
 }
@@ -23,11 +25,13 @@ export interface Docs {
 export interface SidebarItem {
   text: string;
   link: string;
+  badge?: BadgeType;
 }
 
 export interface Sidebar {
   text: string;
   items: SidebarItem[];
+  badge?: BadgeType;
 }
 
 export const docs: Docs = {
@@ -59,6 +63,7 @@ export const docs: Docs = {
     },
     {
       text: "Distroid",
+      badge: BadgeType.Deprecated,
       items: [
         {
           text: "Introduction",
@@ -71,6 +76,28 @@ export const docs: Docs = {
         {
           text: "Download",
           link: "/docs/distroid/download",
+        },
+      ],
+    },
+    {
+      text: "Sniff",
+      badge: BadgeType.New,
+      items: [
+        {
+          text: "Introduction",
+          link: "/docs/sniff/introduction",
+        },
+        {
+          text: "App Details",
+          link: "/docs/sniff/details",
+        },
+        {
+          text: "Download",
+          link: "/docs/sniff/download",
+        },
+        {
+          text: "Deployment",
+          link: "/docs/sniff/deployment",
         },
       ],
     },
