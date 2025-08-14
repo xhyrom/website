@@ -113,6 +113,10 @@ export const SKILLS = [
     icon: "vscode-icons:file-type-go-aqua",
   },
   {
+    name: "Lua",
+    icon: "devicon:lua",
+  },
+  {
     name: "Prisma Client",
     icon: "skill-icons:prisma",
   },
@@ -127,6 +131,10 @@ export const SKILLS = [
   {
     name: "Redis",
     icon: "devicon:redis",
+  },
+  {
+    name: "Docker",
+    icon: "skill-icons:docker",
   },
   {
     name: "Git",
@@ -152,6 +160,10 @@ export const SKILLS = [
   {
     name: "Cloudflare Workers",
     icon: "logos:cloudflare-workers-icon",
+  },
+  {
+    name: "Zed",
+    icon: "simple-icons:zedindustries",
   },
   {
     name: "Visual Studio Code",
