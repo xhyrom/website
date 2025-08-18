@@ -24,6 +24,7 @@ import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
 import me from "@assets/me.png";
 import { AGE, SKILLS } from "~/config";
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout
@@ -43,7 +44,7 @@ import { AGE, SKILLS } from "~/config";
       "https://reddit.com/u/xHyroM",
       "https://wakatime.com/@xhyrom",
     ],
-    jobTitle: "Developer",
+    jobTitle: "Software Engineer",
   }}
 >
   <Navbar />
@@ -55,57 +56,91 @@ import { AGE, SKILLS } from "~/config";
 
   <Container class="pb-4">
     <main class="text-2xl text-white">
-      <section class="flex flex-col lg:flex-row items-center">
+      <section class="flex flex-col lg:flex-row items-center gap-8">
         <Image
           src={me}
           width={375}
           alt="me"
           draggable={false}
-          class="rounded-full mb-4 lg:mb-0 lg:mr-8 h-[250px] w-[250px]"
+          class="rounded-full h-[250px] w-[250px] flex-shrink-0"
         />
 
         <div>
           <p class="mb-4">
             Hey, my name is <span class="text-gold-500">Jozef Steinhübl</span> ("bl"
-            - not "bel", I'm not a bell), alias <span class="text-gold-500"
-              >Hyro, xHyroM, or general_kubo
-            </span>. I am <span class="text-gold-500">{AGE}</span> years old developer
-            with a passion for creating innovative solutions, and I am currently
-            engaged in various projects. Most of my work is open-source and on <a
-              class="text-gold-500"
-              href="https://github.com/xHyroM">GitHub</a
-            >. You can also check <a class="text-gold-500" href="/projects"
-              >Projects</a
-            > page on this website.
+            - not "bel", I'm not a bell), but online you'll probably find me as <span
+              class="text-gold-500">Hyro or xhyrom</span
+            >. I'm a <span class="text-gold-500">{AGE}</span> years old developer
+            who's been fascinated with building things with code since I was ten.
+            I love coming up with creative, efficient and useful solutions to problems.
           </p>
 
-          <p class="mb-4">
-            Apart from my open-source projects, I'm working/have also worked on
-            other notable projects such as <a
+          <p>
+            I believe that the best technology is open and accessible, which is
+            why much ofmy work is open-source and available on my <a
               class="text-gold-500"
-              href="https://rajce.pro">rajce.pro</a
-            >, <a class="text-gold-500" href="https://lendmark.sk">LendMark</a>, <a
-              class="text-gold-500"
-              href="https://discord.com/api/oauth2/authorize?client_id=720321585625694239&permissions=8&scope=applications.commands%20bot"
-              >Mr. Infinity</a
-            >, <a
-              class="text-gold-500"
-              href="http://github.com/xHyroM/roles-bot">Roles Bot</a
-            > and for different youtubers. My keen interest in the latest technologies
-            motivates me to contribute to diverse projects on Github, where I hone
-            my skills and expand my knowledge base.
+              href="https://github.com/xHyroM">GitHub</a
+            >. I enjoy contributing to projects used by others as well as
+            building custom tools. You can explore some of my proudest work on
+            the <a class="text-gold-500" href="/projects">Projects</a> page.
           </p>
         </div>
       </section>
 
+      <section class="my-16">
+        <h2 class="w-full mb-8 text-center text-4xl font-extrabold text-white">
+          Highlights
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-xl">
+          <div
+            class="bg-neutral-900/50 border border-neutral-800 rounded-lg p-6 flex flex-col items-center justify-start"
+          >
+            <Icon
+              name="fluent-emoji-flat:trophy"
+              class="w-16 h-16 mb-4 text-gold-500"
+            />
+            <p class="font-bold text-gold-500">
+              Correspondence Seminar in Informatics (KSI)
+            </p>
+            <p class="text-neutral-400">
+              Achieved 1st Place in the 2024/2025 Season
+            </p>
+          </div>
+          <div
+            class="bg-neutral-900/50 border border-neutral-800 rounded-lg p-6 flex flex-col items-center justify-start"
+          >
+            <Icon
+              name="fluent-emoji-flat:trophy"
+              class="w-16 h-16 mb-4 text-gold-500"
+            />
+            <p class="font-bold text-gold-500">Zenit in Programming</p>
+            <p class="text-neutral-400">
+              National Round Winner 2024/2025 (Cat. B)
+            </p>
+          </div>
+          <div
+            class="bg-neutral-900/50 border border-neutral-800 rounded-lg p-6 flex flex-col items-center justify-start"
+          >
+            <Icon
+              name="fluent-emoji-flat:3rd-place-medal"
+              class="w-16 h-16 mb-4 text-gold-500"
+            />
+            <p class="font-bold text-gold-500">Tour de App</p>
+            <p class="text-neutral-400">3rd Place in the 2024/2025 Finals</p>
+          </div>
+        </div>
+      </section>
+
       <section>
-        <h1 class="w-full py-10 text-center text-4xl font-extrabold text-white">
-          Technology
-        </h1>
+        <h2 class="w-full py-10 text-center text-4xl font-extrabold text-white">
+          My Toolkit
+        </h2>
 
         <div class="mb-4">
-          <p class="mb-4">
-            Below you can see the technologies I work with and use frequently.
+          <p class="mb-6">
+            These are the tools and technologies I use to bring ideas to life.
+            My toolbox is always expanding as I love to explore new things, but
+            these are my current go-tos.
           </p>
 
           <ul
@@ -121,32 +156,7 @@ import { AGE, SKILLS } from "~/config";
               ))
             }
           </ul>
-
-          I'm still learning with some things like Go and Rust, so I don't know
-          them perfectly, but I've included them in this list anyway.
         </div>
-
-        <p class="mb-4">
-          Continuous learning is an essential aspect of my professional journey,
-          and while I do not claim to be a master of any programming language,
-          my expertise in various languages is continually evolving. As a
-          contributor and moderator for the <a
-            class="text-gold-500"
-            href="https://bun.sh">Bun</a
-          > project, I collaborated with my friend <a
-            class="text-gold-500"
-            href="https://github.com/LowByteFox">@LowByteFox</a
-          > to develop a native implementation of the <a
-            class="text-gold-500"
-            href="https://github.com/oven-sh/bun/pull/1115">node:os module</a
-          >.
-        </p>
-
-        <p class="my-4">
-          My passion for learning and staying up-to-date with the latest
-          technologies motivates me to take on new challenges and contribute to
-          diverse projects.
-        </p>
       </section>
     </main>
   </Container>

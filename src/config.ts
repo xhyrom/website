@@ -21,7 +21,7 @@ export const AGE = 16;
 export const SOCIALS = [
   {
     name: "GitHub",
-    link: "https://github.com/xHyroM/",
+    link: "https://github.com/xhyrom/",
     icon: "github.svg",
   },
   {
