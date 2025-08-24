@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://github.com/xhyrom/www/blob/main/src/assets/logo.png?raw=true" alt="Hyro" width="256">
+  <img src="https://github.com/xhyrom/www/blob/main/common/assets/logo.png?raw=true" alt="Hyro" width="256">
   <br>
 </h1>
 
