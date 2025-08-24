@@ -30,7 +30,7 @@ export default (): AstroIntegration => {
           if (!route.distURL) continue;
 
           const content = await readFile(fileURLToPath(route.distURL), "utf-8");
-          const minified = await minify(content, {
+          const minified = minify(content, {
             removeAttributeQuotes: true,
             collapseWhitespace: true,
             minifyCSS: true,

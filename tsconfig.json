@@ -3,17 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "jsx": "preserve",
-    "jsxImportSource": "preact",
-    "paths": {
-      "~/*": ["src/*"],
-      "@docs/*": ["docs/*"],
-      "@blog/*": ["blog/*"],
-      "@pages/*": ["src/pages/*"],
-      "@assets/*": ["src/assets"],
-      "@scripts/*": ["src/scripts"],
-      "@layouts/*": ["src/layouts/*"],
-      "@components/*": ["src/components/*"]
-    }
+    "jsxImportSource": "preact"
   },
   "exclude": ["node_modules", ".astro", "dist"]
 }
