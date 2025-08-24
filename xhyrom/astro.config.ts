@@ -1,45 +1,21 @@
-import { defineConfig } from "astro/config";
+/**
+ * @license
+ * Copyright (c) 2022 Jozef Steinhübl
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
+ */
 
-import tailwind from "@astrojs/tailwind";
+import { defineConfig } from "@www/common/astro.config.ts";
 
-// https://astro.build/config
-import sitemap from "@astrojs/sitemap";
-
-// https://astro.build/config
-import compress from "@playform/compress";
-
-// https://astro.build/config
-import preact from "@astrojs/preact";
-
-// https://astro.build/config
-import robotsTxt from "astro-robots-txt";
-
-// https://astro.build/config
-import icon from "astro-icon";
-import minify from "../astro-integrations/minify";
-import common from "@www/common";
-
-export default defineConfig({
-  site: "https://xhyrom.dev/",
-  prefetch: true,
-  integrations: [
-    common({ branding: "xHyroM" }),
-    tailwind(),
-    sitemap(),
-    compress({
-      SVG: false,
-      HTML: false,
-    }),
-    robotsTxt({
-      policy: [
-        {
-          userAgent: "*",
-        },
-      ],
-      sitemap: true,
-    }),
-    minify(),
-    preact(),
-    icon(),
-  ],
-});
+export default defineConfig("https://xhyrom.dev", "xhyrom");

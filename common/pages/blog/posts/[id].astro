@@ -17,10 +17,13 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
+import type { MarkdownInstance } from "astro";
 import PostLayout from "../../../layouts/blog/PostLayout.astro";
 
 export async function getStaticPaths() {
-  const docs = await Astro.glob("../../../../blog/**/*.md");
+  const docs = await Astro.glob<MarkdownInstance<Record<string, any>>[]>(
+    "../../../../blog/**/*.md",
+  );
 
   return docs.map((doc) => {
     const path = doc.file.split("/blog/")[1];

@@ -25,6 +25,7 @@ import { Image } from "astro:assets";
 import me from "../assets/me.png";
 import { AGE, SKILLS } from "../config";
 import { Icon } from "astro-icon/components";
+import { branding } from "virtual:cfg";
 ---
 
 <Layout
@@ -32,7 +33,7 @@ import { Icon } from "astro-icon/components";
   schemaOrg={{
     "@context": "https://schema.org/",
     "@type": "Person",
-    name: "xhyrom",
+    name: branding,
     sameAs: [
       "https://twitter.com/hyrousek",
       "https://instagram.com/hyro.dev",

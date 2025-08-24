@@ -28,5 +28,6 @@ interface ImportMeta {
 }
 
 declare module "virtual:cfg" {
+  export const site: string;
   export const branding: string;
 }

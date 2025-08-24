@@ -17,6 +17,7 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
+import { site } from "virtual:cfg";
 import Container from "../../components/atoms/Container.astro";
 import Navbar from "../../components/widgets/Navbar.astro";
 import Layout from "../../layouts/Layout.astro";
@@ -29,7 +30,7 @@ const url = Astro.url.pathname;
 <Layout
   description={item.frontmatter.title}
   date={item.frontmatter.date}
-  url={`https://xhyrom.dev${url}`}
+  url={`${site}${url}`}
 >
   <Navbar />
   <div class="w-full py-32">

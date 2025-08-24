@@ -1,4 +1,5 @@
 ---
+import { site } from "virtual:cfg";
 import LeftSidebar from "../../components/widgets/docs/LeftSidebar.astro";
 import RightSidebar from "../../components/widgets/docs/RightSidebar.astro";
 import Navbar from "../../components/widgets/Navbar.astro";
@@ -11,7 +12,7 @@ const currentPage = new URL(Astro.request.url).pathname;
 <Layout
   title={`Docs - ${item.frontmatter.title}`}
   description={item.frontmatter.description}
-  url={`https://xhyrom.dev${item.url}`}
+  url={`${site}${item.url}`}
 >
   <Navbar />
 
