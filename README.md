@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://github.com/xHyroM/website/blob/main/src/assets/logo.png?raw=true" alt="Hyro" width="256">
+  <img src="https://github.com/xhyrom/www/blob/main/src/assets/logo.png?raw=true" alt="Hyro" width="256">
   <br>
 </h1>
 
@@ -14,8 +14,8 @@
 
 ## Setup
 
-1. Clone this repository: `git clone https://github.com/xHyroM/website.git`
-2. Navigate to the project directory: `cd website`
+1. Clone this repository: `git clone https://github.com/xhyrom/www.git`
+2. Navigate to the project directory: `cd www`
 3. Install the dependencies: `bun install`
 
 ## Usage
